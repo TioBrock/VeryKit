@@ -4,235 +4,88 @@ Thank you for your interest in contributing to VeryKit.
 
 VeryKit is an open source project focused on free, fast, accessible tools for QA Engineers and Developers. Contributions are welcome, but they must respect the project's product philosophy and quality standards.
 
-## Current Project Phase
-
-VeryKit is currently in **Phase 1: Architecture and Documentation**.
-
-During this phase, contributions should be limited to:
-
-- Documentation.
-- Product clarification.
-- Architecture notes.
-- Design guidelines.
-- Accessibility guidelines.
-- i18n strategy.
-- SEO strategy.
-- Testing strategy.
-- Open source governance files.
-
-Please do not submit application source code yet.
-
-Not accepted during Phase 1:
-
-- Next.js app files.
-- React components.
-- TypeScript implementation files.
-- CSS files.
-- Test files.
-- Package manifests.
-- Dependency installation.
-- Build configuration.
-
 ## Project Principles
 
 Every contribution should preserve these principles:
 
 - Free forever for core tools.
-- No ads.
-- No forced login.
-- No paywall.
-- No invasive tracking.
+- No ads, no forced login, no paywall, no invasive tracking.
 - Local-first processing whenever possible.
-- Fast workflows.
-- Accessible UX.
+- Fast workflows and accessible UX.
 - International support from day one.
-- Clear architecture.
 
-## Before You Start
+## Getting Started
 
-Read the project documentation:
+```bash
+git clone https://github.com/TioBrock/VeryKit.git
+cd VeryKit
+npm install
+npm run dev
+```
 
-- `.ai/master-prompt.md`
-- `.ai/00-product.md`
-- `.ai/01-architecture.md`
-- `.ai/03-code-standards.md`
-- `.ai/04-features.md`
-- `.ai/05-i18n.md`
-- `.ai/13-ui-guidelines.md`
-- `.ai/14-accessibility.md`
-- `.ai/16-security.md`
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-For small documentation fixes, you do not need to read every file, but you should still make sure your change does not conflict with the product philosophy.
+## Development Commands
 
-## How to Contribute During Phase 1
+```bash
+npm run dev        # Start development server
+npm test           # Run unit tests
+npm run build      # Build for production
+npm run lint       # Run ESLint
+```
 
-1. Open or choose an issue when available.
-2. Fork the repository.
-3. Create a focused branch.
-4. Edit only the relevant documentation files.
-5. Keep language clear and consistent.
-6. Open a pull request with a concise explanation.
+## Adding a New Tool
 
-Suggested branch names:
+Each new tool must follow the isolated feature architecture:
 
-- `docs/product-clarity`
-- `docs/accessibility-guidelines`
-- `docs/i18n-rules`
-- `docs/contributing-update`
+1. Create `src/features/[tool-name]/` with:
+   - `components/[ToolName]Form.tsx` — Client component with `"use client"`
+   - `utils/[function].ts` — Pure utility functions (no React dependencies)
+   - `tests/[function].test.ts` — Unit tests for utility logic
+   - `index.ts` — Barrel export
 
-## Future Local Development
+2. Create route `src/app/[locale]/tools/[tool-name]/page.tsx` with:
+   - `generateMetadata` using `getTranslations` for SEO
+   - JSON-LD structured data
 
-Application setup does not exist yet.
+3. Add i18n namespaces in `messages/en.json`, `messages/pt-BR.json`, `messages/es.json`:
+   - Tool name in `toolNames` section
+   - Full namespace with: title, description, examples, FAQ, whenToUse
 
-When implementation begins, this guide will be updated with the exact commands for:
+4. Register in `src/lib/tools-catalog.ts` with correct category and keywords.
 
-- Installing dependencies.
-- Running the development server.
-- Running tests.
-- Running lint.
-- Running type checks.
-- Building the application.
+5. Add unit tests for all utility functions.
 
-Until then, do not add placeholder setup commands that have not been verified.
+## Code Standards
+
+- TypeScript strict mode.
+- No hardcoded user-facing strings — use `next-intl`.
+- Pure utility functions for business logic.
+- Client components for UI (`"use client"`).
+- Server components for route pages.
+- Tailwind CSS for styling (no inline styles).
+- Follow existing patterns in `src/features/uuid-generator/` as reference.
 
 ## Pull Request Guidelines
 
-Every pull request should include:
+Every PR should include:
 
-- What changed.
-- Why it changed.
+- What changed and why.
 - Which files were affected.
-- Whether the change affects product scope.
-- Whether the change affects future architecture.
+- Screenshots for UI changes.
+- Test results if applicable.
 
-For future implementation PRs, include:
+Keep PRs focused on a single change.
 
-- Testing notes.
-- Screenshots or recordings for UI changes.
-- Accessibility notes.
-- i18n notes.
-- SEO notes.
-- Dependency notes.
+## Internationalization
 
-## Pull Request Scope
+VeryKit supports English (`en`), Portuguese Brazil (`pt-BR`), and Spanish (`es`).
 
-Keep PRs focused.
-
-Good PRs:
-
-- Update one documentation topic.
-- Add missing guidance.
-- Clarify a rule.
-- Fix inconsistency.
-- Improve contributor onboarding.
-
-Avoid PRs that:
-
-- Mix unrelated documentation changes.
-- Rewrite large files without a clear reason.
-- Introduce implementation work during Phase 1.
-- Add unverified claims.
-- Add commercial mechanics or tracking ideas.
-
-## Documentation Style
-
-Documentation should be:
-
-- Clear.
-- Specific.
-- Organized.
-- Honest about project status.
-- Friendly to contributors.
-- Technical enough to guide implementation.
-
-Avoid:
-
-- Empty buzzwords.
-- Overpromising.
-- Claims that are not true yet.
-- Duplicating large sections unnecessarily.
-- Ambiguous rules.
-
-## Future Tool Contribution Requirements
-
-When tool implementation is allowed in a later phase, each new tool will need:
-
-- Isolated feature folder.
-- Stable route.
-- Tool metadata.
-- Localized messages.
-- Accessible UI.
-- Client-side processing where possible.
-- Unit tests for utility logic.
-- Examples.
-- FAQ.
-- "When to use this" section.
-- SEO metadata.
-
-## Internationalization Requirements
-
-VeryKit supports:
-
-- English (`en`).
-- Portuguese Brazil (`pt-BR`).
-- Spanish (`es`).
-
-Future implementation must not hardcode user-facing strings in components.
-
-Tool names remain untranslated, but descriptions, messages, examples, FAQ content, and metadata must be translated.
-
-## Accessibility Requirements
-
-Future UI contributions must support:
-
-- Keyboard navigation.
-- Visible focus states.
-- Semantic HTML.
-- Accessible labels.
-- Clear error messages.
-- Adequate contrast.
-- Mobile and desktop usage.
-
-Accessibility improvements are always welcome.
-
-## Dependency Policy
-
-Future dependency additions must be justified.
-
-A dependency PR must explain:
-
-- Why native APIs are insufficient.
-- Bundle impact.
-- Security considerations.
-- Maintenance status.
-- Alternatives considered.
-
-Do not add dependencies during Phase 1.
+All user-facing strings must use `useTranslations()` or `getTranslations()`. Never hardcode text in components.
 
 ## Security
 
-Do not report security vulnerabilities in public issues.
-
-Follow [SECURITY.md](SECURITY.md).
-
-## Code of Conduct
-
-All contributors must follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
-## Review Process
-
-Maintainers will review contributions for:
-
-- Alignment with project phase.
-- Product fit.
-- Clarity.
-- Technical quality.
-- Accessibility impact.
-- i18n impact.
-- Security impact.
-- Maintainability.
-
-Review feedback should be direct, respectful, and specific.
+Do not report security vulnerabilities in public issues. See [SECURITY.md](SECURITY.md).
 
 ## License
 

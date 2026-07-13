@@ -16,197 +16,137 @@ The goal is simple:
 4. Copy the result.
 5. Close the site.
 
-VeryKit is designed to replace the habit of opening many unrelated websites for quick tasks such as formatting JSON, generating test data, decoding tokens, converting timestamps, testing regular expressions, comparing text, and preparing testing artifacts.
+No ads, no tracking, no paywalls. Just tools that work, run locally, and disappear when you're done.
 
-## Product Principles
+## Features
 
-VeryKit is built around a few strict principles:
+- **17 tools** across 6 categories (Data, API, Testing, Utilities, Regional, Others)
+- **Full i18n**: English, Portuguese (Brazil), Spanish
+- **Bilingual search**: Find tools by name in any supported language
+- **Client-side processing**: All computations happen in your browser
+- **Dark/Light mode**: Automatic theme switching
+- **Responsive design**: Works on mobile, tablet, and desktop
+- **134 unit tests** with Vitest
 
-- Free to use.
-- Open source.
-- No ads.
-- No forced login.
-- No mandatory signup.
-- No newsletter gates.
-- No paywalls.
-- No invasive tracking.
-- Local-first processing whenever possible.
-- Fast, calm, accessible user experience.
-
-This project optimizes for usefulness, trust, speed, and maintainability.
-
-## Current Status
-
-VeryKit is currently in **Phase 1: Architecture and Documentation**.
-
-At this stage, the repository contains product, architecture, design, quality, accessibility, SEO, i18n, security, and open source documentation.
-
-Application source code has not been created yet. This is intentional. The first phase exists to define the project properly before implementation begins.
-
-## Planned Tech Stack
-
-When implementation begins, VeryKit will use:
-
-- Next.js with App Router.
-- React.
-- TypeScript.
-- Tailwind CSS.
-- shadcn/ui.
-- Lucide Icons.
-- Zod.
-- React Hook Form when needed.
-- next-themes.
-- next-intl.
-- ESLint.
-- Prettier.
-- Vitest.
-
-The project will be prepared for deployment on Vercel without manual infrastructure setup.
-
-## Planned Tool Categories
+## Tools
 
 ### Data
 
-- CPF Generator/Validator.
-- CNPJ Generator.
-- UUID Generator.
-- Password Generator.
-- Random Email Generator.
-- Random Person Generator.
-- Random Address Generator.
-- Random Phone Generator.
-- Credit Card Test Generator.
-- Lorem Ipsum Generator.
+| Tool | Description |
+|------|-------------|
+| UUID Generator | Generate random UUIDs (v4) |
+| Password Generator | Secure random passwords with customizable options |
+| Lorem Ipsum Generator | Placeholder text in paragraphs, words, or lists |
+| Credit Card Test Generator | Valid test card numbers (Visa, Mastercard, Amex, Discover) |
 
 ### API
 
-- JSON Formatter.
-- JSON Minifier.
-- JSON Validator.
-- JSON Compare.
-- XML to JSON.
-- JSON to XML.
-- JWT Decoder.
-- JWT Inspector.
-- Base64 Encode.
-- Base64 Decode.
-- URL Encode.
-- URL Decode.
-- Curl Parser.
-
-### Testing
-
-- BDD Generator.
-- Test Case Generator.
-- Acceptance Criteria Helper.
-- Random Test Data.
-- Exploratory Testing Checklist.
+| Tool | Description |
+|------|-------------|
+| JSON Formatter & Minifier | Format, validate, and minify JSON |
+| JSON Compare | Compare two JSON objects side by side |
+| Base64 Encode / Decode | Encode and decode Base64 strings |
+| URL Encode / Decode | Encode and decode URL parameters |
+| JWT Decoder | Decode JWT tokens and inspect claims |
+| JWT Generator & Signer | Generate and sign JWT tokens with HMAC-SHA256 |
 
 ### Utilities
 
-- Regex Tester.
-- Regex Cheat Sheet.
-- Timestamp Converter.
-- Unix Time Converter.
-- Hash Generator.
-- UUID Batch Generator.
-- Case Converter.
-- Text Diff.
-- Color Picker.
+| Tool | Description |
+|------|-------------|
+| Case Converter | Convert between camelCase, snake_case, kebab-case, etc. |
+| Timestamp / Unix Time Converter | Convert between Unix timestamps and dates |
+| Regex Tester | Test regular expressions with highlighted matches |
+| Hash Generator | Generate MD5, SHA-1, SHA-256, SHA-512 hashes |
+| Color Picker & Converter | Pick colors and convert between HEX, RGB, HSL, CMYK |
 
-## Internationalization
+### Regional (Brazil)
 
-VeryKit is an international project created in Brazil.
+| Tool | Description |
+|------|-------------|
+| CPF Generator & Validator | Generate and validate Brazilian CPF numbers |
+| CNPJ Generator & Validator | Generate and validate Brazilian CNPJ numbers |
 
-Internationalization is required from the first implementation phase:
+## Tech Stack
 
-- Default locale: English (`en`).
-- Supported locales: Portuguese Brazil (`pt-BR`) and Spanish (`es`).
-- Tool names remain untranslated.
-- Descriptions, messages, examples, FAQ content, and SEO metadata are translated.
-- No hardcoded user-facing strings should exist in application components once implementation begins.
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Icons**: Lucide React
+- **i18n**: next-intl
+- **Testing**: Vitest
+- **Deployment**: Vercel
 
-## Accessibility
+## Getting Started
 
-VeryKit aims to follow WCAG-oriented accessibility practices.
+### Prerequisites
 
-The product must support:
+- Node.js 18+
+- npm, yarn, or pnpm
 
-- Keyboard navigation.
-- Visible focus states.
-- Semantic HTML.
-- ARIA labels where needed.
-- Accessible forms.
-- Clear error messages.
-- Adequate contrast in light and dark mode.
-- Mobile, tablet, and desktop usage.
+### Installation
 
-## Performance Goals
+```bash
+git clone https://github.com/TioBrock/VeryKit.git
+cd VeryKit
+npm install
+```
 
-VeryKit targets Lighthouse scores greater than 95 for:
+### Development
 
-- Performance.
-- Accessibility.
-- SEO.
-- Best Practices.
+```bash
+npm run dev
+```
 
-Performance is part of the product experience. Tools should open quickly, process locally where possible, and avoid unnecessary dependencies.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Documentation
+### Testing
 
-Project planning and architecture live in `.ai/`.
+```bash
+npm test
+```
 
-Key documents:
+### Build
 
-- `.ai/master-prompt.md` - Executive project memory for future agents.
-- `.ai/00-product.md` - Product requirements.
-- `.ai/01-architecture.md` - Architecture guidelines.
-- `.ai/02-design-system.md` - Design system direction.
-- `.ai/05-i18n.md` - Internationalization rules.
-- `.ai/07-testing.md` - Testing strategy.
-- `.ai/11-agent-rules.md` - Rules for AI agents.
-- `.ai/16-security.md` - Security guidelines.
+```bash
+npm run build
+```
 
-## Local Development
+## Project Structure
 
-Local development commands are not available yet because the project is still in Phase 1.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   └── [locale]/          # i18n locale routes
+│       ├── tools/          # Tool pages
+│       └── about/          # Info pages
+├── components/             # Shared UI components
+├── features/               # Isolated tool modules
+│   └── [tool-name]/
+│       ├── components/     # React components
+│       ├── utils/          # Pure utility functions
+│       ├── tests/          # Unit tests
+│       └── index.ts        # Barrel export
+├── lib/                    # Shared utilities
+└── i18n.ts                 # i18n configuration
+messages/                   # Translation files (en, pt-BR, es)
+```
 
-When implementation begins, this section will be updated with the exact package manager and commands for:
+## Architecture Principles
 
-- Installing dependencies.
-- Running the development server.
-- Running tests.
-- Running lint.
-- Building the project.
+- **Feature isolation**: Each tool lives in its own `src/features/` directory
+- **Client-side processing**: All logic runs in the browser
+- **i18n first**: Every user-facing string is translated
+- **Accessibility**: WCAG-oriented practices
+- **Performance**: Lighthouse scores > 95
 
 ## Contributing
 
-Contributions are welcome, but the project is currently focused on architecture and documentation.
-
-Before contributing, read:
-
-- [CONTRIBUTING.md](CONTRIBUTING.md)
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- [SECURITY.md](SECURITY.md)
-
-Future implementation contributions must preserve:
-
-- Feature isolation.
-- Internationalization.
-- Accessibility.
-- Performance.
-- Local-first processing.
-- The zero ads/login/paywall philosophy.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Security
 
-Please do not report security vulnerabilities through public issues.
-
 See [SECURITY.md](SECURITY.md) for the reporting process.
-
-## Changelog
-
-Project changes are tracked in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

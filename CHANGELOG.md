@@ -2,84 +2,36 @@
 
 All notable changes to VeryKit will be documented in this file.
 
-The format is inspired by Keep a Changelog, and this project uses clear release notes so contributors and users can understand what changed over time.
-
-## [Unreleased]
+## [1.0.0] - 2025-07-12
 
 ### Added
 
-- Initial Phase 1 architecture and documentation foundation.
-- Product requirements documentation.
-- Architecture guidelines.
-- Design system guidelines.
-- Code standards.
-- Feature implementation standard.
-- Internationalization guidelines.
-- SEO guidelines.
-- Testing strategy.
-- Open source guidelines.
-- Roadmap.
-- README maintenance rules.
-- AI agent rules.
-- Product philosophy.
-- UI guidelines.
-- Accessibility guidelines.
-- Performance guidelines.
-- Security guidelines.
-- Public README.
-- Contributing guide.
-- Code of conduct.
-- Security policy.
-- MIT License.
+- **17 developer tools** across 6 categories:
+  - **Data**: UUID Generator, Password Generator, Lorem Ipsum Generator, Credit Card Test Generator
+  - **API**: JSON Formatter, JSON Compare, Base64 Encode/Decode, URL Encode/Decode, JWT Decoder, JWT Generator
+  - **Utilities**: Case Converter, Timestamp Converter, Regex Tester, Hash Generator, Color Picker
+  - **Regional**: CPF Generator & Validator, CNPJ Generator & Validator
+- Full internationalization (English, Portuguese Brazil, Spanish)
+- Bilingual search — find tools by name in any language
+- Category-based filtering on home page
+- Dark/Light mode with automatic theme switching
+- Responsive design (mobile, tablet, desktop)
+- 134 unit tests with Vitest
+- Regex Tester with cheat sheet and highlighted matches
+- JWT Decoder with expiration detection
+- JWT Generator & Signer with HMAC-SHA256 (via jose)
+- Color Picker with HEX, RGB, RGBA, HSL, HSLA, CMYK conversion
+- Hash Generator with MD5, SHA-1, SHA-256, SHA-512
+- Credit Card Generator with Luhn algorithm validation
+- CNPJ/CPF generators with mathematical check digit validation
+- SEO metadata with JSON-LD structured data on every tool page
+- About, Contributing, and Security pages
 
-### Changed
+### Architecture
 
-- Nothing yet.
-
-### Deprecated
-
-- Nothing yet.
-
-### Removed
-
-- Nothing yet.
-
-### Fixed
-
-- Nothing yet.
-
-### Security
-
-- Initial security reporting policy added.
-
-## Release Template
-
-Use this template for future releases:
-
-```markdown
-## [x.y.z] - YYYY-MM-DD
-
-### Added
-
-- New features, tools, or documentation.
-
-### Changed
-
-- Changes to existing behavior.
-
-### Deprecated
-
-- Features planned for removal.
-
-### Removed
-
-- Removed features or files.
-
-### Fixed
-
-- Bug fixes.
-
-### Security
-
-- Security-related changes.
-```
+- Next.js 16 (App Router) with TypeScript
+- Tailwind CSS 4
+- next-intl for internationalization
+- Isolated feature modules in `src/features/`
+- Client-side only processing (no server-side data)
+- Vitest for unit testing
