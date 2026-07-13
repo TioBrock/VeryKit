@@ -1,0 +1,1039 @@
+{
+  "brand": {
+    "name": "VeryKit",
+    "slogan": "One place. Every tool.",
+    "description": "Ferramentas gratuitas para QA Engineers e Developers."
+  },
+  "toolNames": {
+    "uuid-generator": "Gerador de UUID",
+    "password-generator": "Gerador de Senhas",
+    "lorem-ipsum-generator": "Gerador de Lorem Ipsum",
+    "cpf-generator": "Gerador e Validador de CPF",
+    "json-formatter": "Formatador e Minificador de JSON",
+    "base64-converter": "Codificador / Decodificador Base64",
+    "url-encoder": "Codificador / Decodificador de URL",
+    "case-converter": "Conversor de Caixa",
+    "timestamp-converter": "Conversor de Timestamp / Hora Unix",
+    "jwt-decoder": "Decodificador JWT",
+    "json-compare": "Comparador de JSON",
+    "credit-card-generator": "Gerador de Cartão de Crédito para Testes",
+    "cnpj-generator": "Gerador e Validador de CNPJ",
+    "regex-tester": "Testador de Regex",
+    "hash-generator": "Gerador de Hash",
+    "color-picker": "Seletor e Conversor de Cores",
+    "jwt-generator": "Gerador e Assinador de JWT"
+  },
+  "navigation": {
+    "home": "Início",
+    "tools": "Ferramentas",
+    "about": "Sobre",
+    "searchLabel": "Buscar ferramentas",
+    "searchPlaceholder": "Buscar ferramentas..."
+  },
+  "actions": {
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "search": "Buscar",
+    "toggleTheme": "Alternar tema",
+    "switchLanguage": "Trocar idioma"
+  },
+  "buttons": {
+    "paste": "Colar"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "en": "Inglês",
+    "pt-BR": "Português",
+    "es": "Espanhol"
+  },
+  "home": {
+    "title": "VeryKit",
+    "subtitle": "Ferramentas gratuitas para QA Engineers e Developers.",
+    "searchPlaceholder": "Buscar ferramentas, geradores, formatadores...",
+    "categories": {
+      "title": "Categorias",
+      "data": "Dados",
+      "dataDescription": "Geradores e validadores para dados de teste",
+      "api": "API",
+      "apiDescription": "Formate, decodifique e transforme payloads de API",
+      "testing": "Testes",
+      "testingDescription": "Utilitários para criação de casos de teste e workflows de QA",
+      "utilities": "Utilidades",
+      "utilitiesDescription": "Ferramentas auxiliares para texto, código e desenvolvedores",
+      "regional": "Ferramentas Regionais",
+      "regionalDescription": "Geradores e validadores específicos por país",
+      "others": "Outros",
+      "othersDescription": "Ferramentas e utilitários adicionais"
+    },
+    "tools": {
+      "title": "Ferramentas",
+      "description": "Navegue por todas as ferramentas disponíveis, organizadas por categoria"
+    },
+    "about": {
+      "title": "Sobre o VeryKit",
+      "description": "O VeryKit nasceu da necessidade de ter um lugar único, limpo, rápido e consciente de privacidade para as pequenas utilidades que QA Engineers, Test Automation Engineers e Software Developers usam todos os dias."
+    }
+  },
+  "about": {
+    "title": "Sobre o VeryKit",
+    "description": "O VeryKit nasceu da necessidade de ter um lugar único, limpo, rápido e consciente de privacidade para as pequenas utilidades que QA Engineers, Test Automation Engineers e Software Developers usam todos os dias.",
+    "mission": {
+      "title": "Nossa Missão",
+      "description": "O VeryKit existe para eliminar o atrito das tarefas diárias de desenvolvimento. Cada ferramenta roda inteiramente no seu navegador, significando que seus dados nunca saem do seu dispositivo. Acreditamos que ferramentas utilitárias devem ser rápidas, acessíveis e respeitosas à privacidade por padrão."
+    },
+    "privacy": {
+      "title": "Privacidade em Primeiro Lugar",
+      "description": "Sem analytics, sem rastreamento, sem processamento server-side. Toda computação acontece localmente usando APIs modernas do navegador como a Web Crypto API. Quando você fecha a aba, tudo desaparece."
+    },
+    "openSource": {
+      "title": "Código Aberto",
+      "description": "O VeryKit é construído de forma aberta. Contribuições, relatórios de bugs e solicitações de funcionalidades são bem-vindos da comunidade. Confira nossas diretrizes de contribuição para começar."
+    }
+  },
+  "contributing": {
+    "title": "Contribuição",
+    "description": "Obrigado pelo seu interesse em contribuir com o VeryKit! Aqui está como você pode ajudar.",
+    "reporting": {
+      "title": "Reportando Problemas",
+      "description": "Encontrou um bug ou tem uma sugestão? Abra uma issue no nosso repositório GitHub. Por favor, inclua:",
+      "items": [
+        "Uma descrição clara do problema ou sugestão",
+        "Passos para reproduzir (para bugs)",
+        "Seu navegador e sistema operacional",
+        "Capturas de tela, se aplicável"
+      ]
+    },
+    "code": {
+      "title": "Contribuindo com Código",
+      "description": "Quer adicionar uma nova ferramenta ou corrigir um bug? Aqui está o processo:",
+      "items": [
+        "Faça fork do repositório no GitHub",
+        "Crie uma branch de funcionalidade a partir do main",
+        "Siga os padrões existentes do projeto (veja src/features/ para exemplos)",
+        "Adicione testes para suas alterações",
+        "Certifique-se de que todos os testes passam com npm test",
+        "Envie um pull request com uma descrição clara"
+      ]
+    },
+    "setup": {
+      "title": "Configuração de Desenvolvimento",
+      "description": "Clone o repositório, instale as dependências e inicie o servidor de desenvolvimento:",
+      "command": "git clone https://github.com/your-username/verykit.git && cd verykit && npm install && npm run dev"
+    }
+  },
+  "security": {
+    "title": "Segurança",
+    "description": "Sua segurança é importante para nós. Esta página explica como reportar vulnerabilidades e o que fazemos para manter o VeryKit seguro.",
+    "reporting": {
+      "title": "Reportando Vulnerabilidades",
+      "description": "Se você descobrir uma vulnerabilidade de segurança no VeryKit, por favor, reporte de forma responsável:",
+      "items": [
+        "Abra um aviso de segurança privado no nosso repositório GitHub",
+        "Não divulgue a vulnerabilidade publicamente até que uma correção esteja disponível",
+        "Inclua uma descrição detalhada do problema e seu impacto potencial",
+        "Reconheceremos seu relatório dentro de 48 horas"
+      ]
+    },
+    "design": {
+      "title": "Design de Segurança",
+      "description": "O VeryKit é projetado com segurança em mente:",
+      "items": [
+        "Apenas client-side: Todas as computações acontecem no seu navegador. Nenhum dado é enviado para um servidor.",
+        "Sem coleta de dados: Não coletamos, armazenamos ou transmitimos dados do usuário.",
+        "Sem rastreamento: Sem analytics, cookies ou scripts de rastreamento.",
+        "Web Crypto API: Operações criptográficas usam as APIs seguras nativas do navegador.",
+        "Código aberto: Nosso código é publicamente auditável no GitHub."
+      ]
+    },
+    "scope": {
+      "title": "Escopo",
+      "description": "Os seguintes itens são considerados no escopo para relatórios de segurança:",
+      "items": [
+        "Vulnerabilidades no código da aplicação web",
+        "Problemas com lógica de tratamento ou processamento de dados",
+        "Vulnerabilidades de Cross-site scripting (XSS)",
+        "Qualquer problema que possa comprometer a privacidade do usuário"
+      ]
+    }
+  },
+  "footer": {
+    "description": "Ferramentas gratuitas, open source e conscientes de privacidade para o dia a dia de QA e desenvolvimento.",
+    "repository": "Repositório",
+    "contributing": "Contribuição",
+    "security": "Segurança"
+  },
+  "uuid-generator": {
+    "title": "Gerador de UUID",
+    "description": "Gere UUIDs aleatórios (v4) instantaneamente no seu navegador. Nenhum dado sai do seu dispositivo.",
+    "generate": "Gerar UUID",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "UUID Gerado",
+    "resultPlaceholder": "Clique em \"Gerar UUID\" para criar um novo identificador",
+    "successCopy": "UUID copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar um UUID para um novo registro no banco de dados",
+        "Criar identificadores únicos para rastreamento de requisições de API",
+        "Gerar dados de teste para QA e desenvolvimento"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é um UUID?",
+          "answer": "Um UUID (Universally Unique Identifier) é um identificador de 128 bits que é único no espaço e no tempo. O formato v4 gera um identificador completamente aleatório."
+        },
+        {
+          "question": "Esta ferramenta envia dados para um servidor?",
+          "answer": "Não. Toda a geração de UUID acontece localmente no seu navegador usando a Web Crypto API. Nenhum dado é enviado para lugar algum."
+        },
+        {
+          "question": "Qual é a diferença entre UUID v4 e outras versões?",
+          "answer": "O UUID v4 é completamente aleatório. Outras versões como v1 usam endereços MAC e timestamps, enquanto v5 usa hash baseado em namespace. V4 é o formato mais comumente usado para propósitos gerais."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Quando você precisa de um identificador único para registros no banco de dados",
+        "Ao gerar dados de teste para desenvolvimento de API ou testes de QA",
+        "Ao criar IDs únicos para logging, rastreamento ou gerenciamento de sessões",
+        "Ao trabalhar com sistemas distribuídos que requerem identificadores resistentes a colisões"
+      ]
+    }
+  },
+  "password-generator": {
+    "title": "Gerador de Senhas",
+    "description": "Gere senhas aleatórias e seguras instantaneamente no seu navegador. Opções de caracteres totalmente personalizáveis. Nenhum dado sai do seu dispositivo.",
+    "generate": "Gerar Senha",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Senha Gerada",
+    "resultPlaceholder": "Clique em \"Gerar Senha\" para criar uma nova senha",
+    "successCopy": "Senha copiada para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "length": "Tamanho da Senha",
+    "uppercase": "Maiúsculas (A-Z)",
+    "lowercase": "Minúsculas (a-z)",
+    "numbers": "Números (0-9)",
+    "symbols": "Símbolos (!@#$...)",
+    "errorNoChars": "Por favor, selecione pelo menos um tipo de caractere.",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Criar uma senha forte para uma nova conta online",
+        "Gerar senhas de teste para QA e testes de segurança",
+        "Criar chaves de API ou tokens para ambientes de desenvolvimento"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Quão seguras são as senhas geradas?",
+          "answer": "As senhas são geradas usando a Web Crypto API, que fornece valores aleatórios criptograficamente seguros. São geradas inteiramente no seu navegador e nunca enviadas para qualquer servidor."
+        },
+        {
+          "question": "Posso personalizar o tamanho da senha?",
+          "answer": "Sim. Você pode definir o tamanho da senha de 4 a 128 caracteres usando o campo de entrada de tamanho."
+        },
+        {
+          "question": "Quais tipos de caracteres posso incluir?",
+          "answer": "Você pode alternar letras maiúsculas (A-Z), letras minúsculas (a-z), números (0-9) e símbolos (!@#$%^&* etc.). Pelo menos um tipo deve ser selecionado."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Quando você precisa de uma senha forte e aleatória para uma nova conta",
+        "Ao gerar credenciais de teste para QA e testes de segurança",
+        "Ao criar tokens de API, chaves secretas ou identificadores de sessão",
+        "Quando deseja verificar requisitos de força de senha"
+      ]
+    }
+  },
+  "lorem-ipsum-generator": {
+    "title": "Gerador de Lorem Ipsum",
+    "description": "Gere texto de exemplo em parágrafos, palavras ou listas para protótipos e desenvolvimento. Nenhum dado sai do seu dispositivo.",
+    "generate": "Gerar Texto",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Texto Gerado",
+    "resultPlaceholder": "Clique em \"Gerar Texto\" para criar conteúdo de exemplo",
+    "successCopy": "Texto copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "count": "Quantidade",
+    "typeParagraphs": "Parágrafos",
+    "typeWords": "Palavras",
+    "typeLists": "Listas",
+    "errorNoType": "Por favor, selecione um tipo de texto.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Preencher o layout de uma página com texto de exemplo durante o design",
+        "Gerar conteúdo de amostra para testes de blog ou CMS",
+        "Criar blocos de texto para testes de componentes UI e QA"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é Lorem Ipsum?",
+          "answer": "Lorem Ipsum é simplesmente um texto fictício da indústria de impressão e typesetting. Tem sido o texto fictício padrão da indústria desde os anos 1500."
+        },
+        {
+          "question": "Quantos itens posso gerar de uma vez?",
+          "answer": "Você pode gerar de 1 a 100 itens (parágrafos, palavras ou itens de lista) em uma única operação."
+        },
+        {
+          "question": "O texto gerado é aleatório?",
+          "answer": "Os parágrafos e listas são extraídos do corpus clássico do Lorem Ipsum. As palavras são selecionadas aleatoriamente do corpus para garantir variedade."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao projetar layouts de páginas e precisar de texto de exemplo",
+        "Ao testar componentes com muito texto como artigos ou feeds",
+        "Ao criar protótipos para plataformas CMS ou de blogging",
+        "Ao desenvolver componentes responsivos que precisam de comprimento variável de conteúdo"
+      ]
+    }
+  },
+  "cpf-generator": {
+    "title": "Gerador e Validador de CPF",
+    "description": "Gere e valide CPFs brasileiros com os dígitos verificadores corretos. Totalmente no lado do cliente, nenhum dado enviado.",
+    "generate": "Gerar CPF",
+    "validate": "Validar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Número do CPF",
+    "resultPlaceholder": "Clique em \"Gerar CPF\" ou insira um CPF para validar",
+    "successCopy": "CPF copiado para a área de transferência",
+    "successValid": "CPF Válido",
+    "errorInvalid": "CPF Inválido",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "inputPlaceholder": "Digite um CPF (ex: 123.456.789-09)",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar CPFs válidos para testes QA em sistemas brasileiros",
+        "Validar CPFs inseridos por usuários em lógica de validação de formulários",
+        "Criar dados de teste para aplicações financeiras ou governamentais"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é um CPF?",
+          "answer": "CPF (Cadastro de Pessoas Físicas) é o número de inscrição no cadastro de pessoas físicas da Receita Federal. Consiste em 11 dígitos, incluindo dois dígitos verificadores calculados com um algoritmo específico."
+        },
+        {
+          "question": "Os CPFs gerados são reais?",
+          "answer": "Não. O gerador cria números de CPF que passam no algoritmo de verificação de dígitos, mas não necessariamente estão registrados na Receita Federal. São apenas para fins de teste."
+        },
+        {
+          "question": "Como funciona a validação?",
+          "answer": "A validação verifica se o CPF tem exatamente 11 dígitos e se os dois dígitos verificadores correspondem aos valores calculados a partir dos primeiros 9 dígitos usando o algoritmo oficial."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao testar formulários brasileiros que exigem entrada de CPF",
+        "Ao validar entradas de CPF em testes QA e automação",
+        "Ao gerar dados de teste para sistemas financeiros ou governamentais",
+        "Ao desenvolver lógica de validação de CPF e precisar de valores de referência"
+      ]
+    }
+  },
+  "json-formatter": {
+    "title": "Formatador e Minificador de JSON",
+    "description": "Formate, valide e minifique dados JSON instantaneamente. Indentação configurável. Nenhum dado sai do seu dispositivo.",
+    "format": "Formatar",
+    "minify": "Minificar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Resultado",
+    "resultPlaceholder": "JSON formatado ou minificado aparecerá aqui",
+    "inputPlaceholder": "Cole seu JSON aqui...",
+    "successCopy": "JSON copiado para a área de transferência",
+    "errorInvalid": "JSON inválido",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "indentSize": "Tamanho da Indentação",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Formatar uma resposta de API para melhor legibilidade",
+        "Minificar um payload JSON antes de enviá-lo pela rede",
+        "Validar dados JSON e localizar erros de sintaxe"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é formatação de JSON?",
+          "answer": "A formatação (ou pretty-print) adiciona indentação e quebras de linha aos dados JSON, tornando-os legíveis para humanos. A minificação remove todo o espaço em desnecessário."
+        },
+        {
+          "question": "Quais tamanhos de indentação são suportados?",
+          "answer": "Você pode escolher entre 2 ou 4 espaços para indentação, ou usar caracteres de tabulação."
+        },
+        {
+          "question": "Esta ferramenta funciona com arquivos JSON grandes?",
+          "answer": "Sim, a formatação acontece inteiramente no seu navegador. No entanto, arquivos muito grandes (mais de 10MB) podem levar um momento para processar, dependendo do seu dispositivo."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao depurar respostas de API e precisar de JSON legível",
+        "Ao preparar dados JSON para arquivos de configuração",
+        "Ao validar JSON antes de enviá-lo para uma API",
+        "Ao reduzir o tamanho do payload minificando dados JSON"
+      ]
+    }
+  },
+  "base64-converter": {
+    "title": "Codificador / Decodificador Base64",
+    "description": "Codifique e decodifique strings Base64 instantaneamente no seu navegador. Suporte a texto UTF-8. Nenhum dado sai do seu dispositivo.",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Resultado",
+    "resultPlaceholder": "Texto codificado ou decodificado aparecerá aqui",
+    "inputPlaceholder": "Digite o texto para codificar ou decodificar...",
+    "successCopy": "Resultado copiado para a área de transferência",
+    "errorInvalid": "String Base64 inválida",
+    "errorDecode": "Falha ao decodificar. A entrada não é Base64 válido.",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Codificar credenciais para cabeçalhos de Autenticação Básica HTTP",
+        "Decodificar respostas ou tokens de API codificados em Base64",
+        "Converter dados binários em um formato seguro para texto para transmissão"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é Base64?",
+          "answer": "Base64 é um esquema de codificação que representa dados binários como uma string de caracteres ASCII. É comumente usado para codificar dados para transmissão via protocolos baseados em texto como HTTP e email."
+        },
+        {
+          "question": "Esta ferramenta suporta texto UTF-8?",
+          "answer": "Sim. O codificador e decodificador suportam completamente UTF-8, incluindo caracteres acentuados, emojis e scripts não latinos."
+        },
+        {
+          "question": "A codificação Base64 é segura?",
+          "answer": "Não. Base64 é uma codificação, não uma criptografia. É facilmente reversível e não deve ser usada para proteger dados sensíveis. Use-a para transporte de dados, não para segurança."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao codificar credenciais para Autenticação Básica HTTP",
+        "Ao decodificar tokens, payloads ou emails codificados em Base64",
+        "Ao incorporar dados binários (imagens, arquivos) em JSON ou XML",
+        "Ao depurar problemas de codificação de dados em APIs"
+      ]
+    }
+  },
+  "url-encoder": {
+    "title": "Codificador / Decodificador de URL",
+    "description": "Codifique e decodifique parâmetros de URL e caracteres especiais instantaneamente. Suporte a codificação completa e de componente. Nenhum dado sai do seu dispositivo.",
+    "encode": "Codificar",
+    "decode": "Decodificar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Resultado",
+    "resultPlaceholder": "URL codificada ou decodificada aparecerá aqui",
+    "inputPlaceholder": "Digite uma URL ou texto para codificar/decodificar...",
+    "successCopy": "Resultado copiado para a área de transferência",
+    "errorInvalid": "Entrada inválida",
+    "errorDecode": "Falha ao decodificar. A entrada não é uma URL codificada válida.",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "encodeMode": "Modo de Codificação",
+    "modeFull": "Completo (codificar todos os caracteres especiais)",
+    "modeComponent": "Componente (codificar segmentos de caminho)",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Codificar parâmetros de consulta antes de construir uma URL",
+        "Decodificar uma string codificada em URL de uma resposta de API",
+        "Sanitizar entrada do usuário para uso em caminhos de URL"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é codificação de URL?",
+          "answer": "A codificação de URL (percent-encoding) substitui caracteres inseguros por % seguido de dois dígitos hexadecimais. Por exemplo, um espaço se torna %20."
+        },
+        {
+          "question": "Qual é a diferença entre codificação Completa e de Componente?",
+          "answer": "A codificação completa (encodeURI) preserva separadores de caminho como / e :. A codificação de componente (encodeURIComponent) codifica tudo exceto letras, dígitos e _ . - ~."
+        },
+        {
+          "question": "Quando devo usar a codificação de URL?",
+          "answer": "Use-a ao passar dados em strings de consulta de URL, especialmente para valores contendo espaços, caracteres especiais ou texto não-ASCII."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao construir URLs com parâmetros de consulta dinâmicos",
+        "Ao decodificar strings codificadas em URL de respostas de API ou logs",
+        "Ao sanitizar entrada do usuário que será usada em URLs",
+        "Ao depurar problemas de codificação/decodificação de URL"
+      ]
+    }
+  },
+  "case-converter": {
+    "title": "Conversor de Caixa",
+    "description": "Converta texto entre MAIÚSCULAS, minúsculas, camelCase, snake_case, kebab-case, PascalCase e mais. Nenhum dado sai do seu dispositivo.",
+    "convert": "Converter",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Resultado",
+    "resultPlaceholder": "Texto convertido aparecerá aqui",
+    "inputPlaceholder": "Digite o texto para converter...",
+    "successCopy": "Texto copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "errorEmpty": "Por favor, insira algum texto para converter.",
+    "inputLabel": "Texto de Entrada",
+    "optionsLabel": "Opções de Conversão",
+    "uppercase": "MAIÚSCULAS",
+    "lowercase": "minúsculas",
+    "titleCase": "Primeira Maiúscula",
+    "sentenceCase": "Primeira letra da frase",
+    "camelCase": "camelCase",
+    "pascalCase": "PascalCase",
+    "snakeCase": "snake_case",
+    "kebabCase": "kebab-case",
+    "dotCase": "dot.case",
+    "constantCase": "CONSTANT_CASE",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Converter nomes de variáveis entre camelCase e snake_case ao portar código",
+        "Formatar textos para cabeçalhos, títulos ou documentação",
+        "Normalizar convenções de nomenclatura inconsistentes em uma base de código"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é conversão de caixa?",
+          "answer": "A conversão de caixa transforma texto entre diferentes convenções de nomenclatura usadas em programação e escrita, como camelCase, snake_case, kebab-case e outras."
+        },
+        {
+          "question": "Qual caixa devo usar?",
+          "answer": "Depende do contexto: camelCase para variáveis JavaScript, snake_case para Python/Ruby, kebab-case para CSS e URLs, PascalCase para nomes de classes, UPPER_SNAKE_CASE para constantes."
+        },
+        {
+          "question": "Posso converter trechos de código inteiros?",
+          "answer": "Sim, o conversor funciona com qualquer texto. No entanto, ele converte todas as palavras de forma uniforme, então é mais adequado para identificadores ou frases únicas."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao renomear variáveis entre convenções de diferentes linguagens",
+        "Ao normalizar textos para documentação ou gerenciamento de conteúdo",
+        "Ao converter nomes de classes CSS ou slugs de URL",
+        "Ao gerar nomes de constantes ou valores de enum a partir de texto descritivo"
+      ]
+    }
+  },
+  "timestamp-converter": {
+    "title": "Conversor de Timestamp / Hora Unix",
+    "description": "Converta entre timestamps Unix e datas legíveis. Suporte a segundos e milissegundos, UTC e hora local. Nenhum dado sai do seu dispositivo.",
+    "convert": "Converter",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Resultado",
+    "resultPlaceholder": "Valor convertido aparecerá aqui",
+    "inputPlaceholder": "Digite um timestamp Unix ou string de data...",
+    "successCopy": "Resultado copiado para a área de transferência",
+    "errorInvalid": "Timestamp ou formato de data inválido",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "inputLabel": "Entrada",
+    "currentTimestamp": "Timestamp Atual",
+    "seconds": "segundos",
+    "milliseconds": "milissegundos",
+    "utc": "UTC",
+    "local": "Hora Local",
+    "timestampUnit": "Unidade do Timestamp",
+    "timezone": "Fuso Horário",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Converter um timestamp Unix de uma resposta de API para uma data legível",
+        "Obter o timestamp Unix atual para logging ou depuração",
+        "Validar valores de timestamp em QA e testes automatizados"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é um timestamp Unix?",
+          "answer": "Um timestamp Unix é o número de segundos (ou milissegundos) que se passaram desde 1 de janeiro de 1970 (a era Unix). É um padrão amplamente utilizado para representar datas e horários na computação."
+        },
+        {
+          "question": "Qual é a diferença entre segundos e milissegundos?",
+          "answer": "Um timestamp em segundos tem 10 dígitos (ex: 1700000000). Um timestamp em milissegundos tem 13 dígitos (ex: 1700000000000). A ferramenta detecta automaticamente o formato."
+        },
+        {
+          "question": "Quais formatos de data são aceitos?",
+          "answer": "A ferramenta aceita formato ISO 8601 (2024-01-15T10:30:00Z) e formatos comuns de data. Você também pode colar um timestamp Unix diretamente."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao depurar respostas de API que contêm timestamps Unix",
+        "Ao converter timestamps de logs para datas legíveis",
+        "Ao gerar timestamps atuais para testes ou documentação",
+        "Ao validar dados relacionados a tempo em QA e automação"
+      ]
+    }
+  },
+  "jwt-decoder": {
+    "title": "Decodificador JWT",
+    "description": "Decodifique JSON Web Tokens (JWT) instantaneamente. Visualize Header, Payload e Signature. Detecta tokens expirados. Todo processamento acontece no lado do cliente.",
+    "paste": "Colar",
+    "clear": "Limpar",
+    "inputPlaceholder": "Cole um token JWT aqui...",
+    "inputLabel": "Token JWT",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "expired": "Token EXPIRADO",
+    "valid": "Token válido (não expirado)",
+    "issuedAt": "Emitido em",
+    "expiresAt": "Expira em",
+    "errorInvalid": "Token JWT inválido. Por favor, verifique o formato.",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "successCopy": "Copiado para a área de transferência",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Depurar e inspecionar tokens JWT de respostas de API",
+        "Verificar claims e datas de expiração de tokens",
+        "Entender a estrutura de tokens de autenticação"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é um JWT?",
+          "answer": "Um JWT (JSON Web Token) é um meio compacto e URL-safe de representar claims entre duas partes. Consiste em três partes: header, payload e signature, separadas por pontos."
+        },
+        {
+          "question": "Esta ferramenta valida assinaturas JWT?",
+          "answer": "Não. Esta ferramenta apenas decodifica o conteúdo do token para inspeção. Ela não verifica a assinatura criptográfica, pois isso requer a chave de assinatura."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao depurar problemas de autenticação em chamadas de API",
+        "Quando precisa inspecionar o conteúdo de tokens rapidamente",
+        "Ao verificar se um token JWT expirou",
+        "Ao aprender sobre a estrutura e claims de JWT"
+      ]
+    }
+  },
+  "json-compare": {
+    "title": "Comparador de JSON",
+    "description": "Compare dois objetos JSON lado a lado. Destaca visualmente valores adicionados, removidos e alterados.",
+    "compare": "Comparar",
+    "clear": "Limpar",
+    "inputPlaceholder": "Cole JSON aqui...",
+    "inputLabelA": "JSON A (Original)",
+    "inputLabelB": "JSON B (Modificado)",
+    "labelA": "JSON A",
+    "labelB": "JSON B",
+    "placeholderA": "Cole o JSON original aqui...",
+    "placeholderB": "Cole o JSON modificado aqui...",
+    "added": "Adicionado",
+    "removed": "Removido",
+    "changed": "Alterado",
+    "identical": "Os objetos JSON são idênticos",
+    "differences": "diferenças encontradas",
+    "errorInvalid": "Uma ou ambas as entradas não são JSON válido.",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "successCopy": "Copiado para a área de transferência",
+    "resultsTitle": "Diferenças",
+    "copied": "Copiado para a área de transferência",
+    "noDiffs": "Os objetos JSON são idênticos",
+    "errorEmpty": "Por favor, insira JSON em ambos os campos.",
+    "errorInvalidA": "JSON A não é válido.",
+    "errorInvalidB": "JSON B não é válido.",
+    "errorCompare": "Erro ao comparar JSON.",
+    "legendAdded": "Adicionado",
+    "legendRemoved": "Removido",
+    "legendChanged": "Alterado",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Comparar duas respostas de API para encontrar diferenças",
+        "Validar alterações em arquivos de configuração",
+        "Revisar modificações em payloads JSON antes do deploy"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Como funciona a comparação de JSON?",
+          "answer": "A ferramenta percorre recursivamente ambos os objetos JSON e compara cada par chave-valor. As diferenças são categorizadas como adicionadas (novas chaves), removidas (chaves ausentes) ou alteradas (valores diferentes)."
+        },
+        {
+          "question": "A ordem dos elementos do array importa?",
+          "answer": "Sim. A comparação de arrays é sensível à ordem. Dois arrays com os mesmos elementos em ordem diferentes serão marcados como diferentes."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao depurar diferenças em respostas de API",
+        "Ao comparar arquivos de configuração",
+        "Ao revisar alterações em dados JSON"
+      ]
+    }
+  },
+  "credit-card-generator": {
+    "title": "Gerador de Cartão de Crédito para Testes",
+    "description": "Gere números de cartão de crédito válidos para testes em Visa, Mastercard, Amex e Discover. Apenas para ambientes sandbox/teste - não são cartões reais.",
+    "generate": "Gerar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Número do Cartão",
+    "resultPlaceholder": "Clique em Gerar para criar um número de cartão de teste",
+    "successCopy": "Número do cartão copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "warning": "APENAS PARA TESTES: Estes são números fictícios de cartão para ambientes sandbox. Nunca use números de cartão reais.",
+    "brand": "Bandeira do Cartão",
+    "brandLabel": "Bandeira do Cartão",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "amex": "American Express",
+    "discover": "Discover",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar números de cartão de teste para validação de formulário de pagamento",
+        "Testar integrações com gateways de pagamento em modo sandbox",
+        "Criar dados fictícios para testes QA de fluxos de checkout"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Estes são números de cartão de crédito reais?",
+          "answer": "Não. Estes são números de cartão de teste válidos que passam na verificação do algoritmo de Luhn, mas não estão associados a nenhuma conta real. São destinados a testes de formulários de pagamento em ambientes sandbox."
+        },
+        {
+          "question": "Quais bandeiras de cartão são suportadas?",
+          "answer": "Visa, Mastercard, American Express (Amex) e Discover."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao testar validação de formulários de pagamento",
+        "Ao integrar com gateways de pagamento em modo sandbox",
+        "Ao criar dados de teste para automação QA de fluxos de checkout"
+      ]
+    }
+  },
+  "cnpj-generator": {
+    "title": "Gerador e Validador de CNPJ",
+    "description": "Gere e valide CNPJs brasileiros com os dígitos verificadores corretos. Totalmente no lado do cliente, nenhum dado enviado.",
+    "generate": "Gerar CNPJ",
+    "validate": "Validar",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "resultLabel": "Número do CNPJ",
+    "resultPlaceholder": "Clique em Gerar ou insira um CNPJ para validar",
+    "successCopy": "CNPJ copiado para a área de transferência",
+    "successValid": "CNPJ Válido",
+    "errorInvalid": "CNPJ Inválido",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "inputPlaceholder": "Digite um CNPJ (ex: 11.222.333/0001-81)",
+    "inputLabel": "Número do CNPJ",
+    "placeholder": "11.222.333/0001-81",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar CNPJs válidos para testes QA em sistemas brasileiros",
+        "Validar CNPJs inseridos por usuários em lógica de validação de formulários",
+        "Criar dados de teste para aplicações financeiras ou governamentais",
+        "Desenvolver lógica de validação de CNPJ"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é um CNPJ?",
+          "answer": "CNPJ (Cadastro Nacional da Pessoa Jurídica) é o número de inscrição no cadastro de pessoas jurídicas da Receita Federal. Consiste em 14 dígitos, incluindo dois dígitos verificadores calculados com um algoritmo específico."
+        },
+        {
+          "question": "Os CNPJs gerados são reais?",
+          "answer": "Não. O gerador cria números de CNPJ que passam no algoritmo de verificação de dígitos, mas não necessariamente estão registrados na Receita Federal. São apenas para fins de teste."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao testar formulários brasileiros que exigem entrada de CNPJ",
+        "Ao validar entradas de CNPJ em testes QA e automação",
+        "Ao gerar dados de teste para sistemas financeiros ou governamentais",
+        "Ao desenvolver lógica de validação de CNPJ"
+      ]
+    }
+  },
+  "regex-tester": {
+    "title": "Testador de Regex",
+    "description": "Teste expressões regulares contra texto em tempo real. Destaca correspondências visualmente com suporte completo a grupos e capturas.",
+    "test": "Testar",
+    "clear": "Limpar",
+    "regexPlaceholder": "Digite o padrão regex (ex: \\d{3}-\\d{4})",
+    "textPlaceholder": "Digite o texto para testar contra a regex...",
+    "regexLabel": "Expressão Regular",
+    "textLabel": "Texto de Teste",
+    "patternLabel": "Padrão",
+    "patternPlaceholder": "Digite o padrão regex",
+    "flagsLabel": "Flags",
+    "matchCount": "correspondências encontradas",
+    "flags": "Flags",
+    "matches": "correspondências encontradas",
+    "noMatches": "Nenhuma correspondência encontrada",
+    "matchGroups": "Grupos de Correspondência",
+    "errorInvalid": "Expressão regular inválida",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "successCopy": "Copiado para a área de transferência",
+    "invalidPattern": "Padrão regex inválido",
+    "highlightedTitle": "Correspondências Destacadas",
+    "copy": "Copiar",
+    "copied": "Copiado para a área de transferência",
+    "cheatSheetTitle": "Referência de Regex",
+    "cheatSheetDesc": "Clique em um padrão para usá-lo",
+    "cheatSheetEmail": "Email",
+    "cheatSheetUrl": "URL",
+    "cheatSheetNumbers": "Apenas números",
+    "cheatSheetPhoneBR": "Telefone (BR)",
+    "cheatSheetDate": "Data (DD/MM/AAAA)",
+    "cheatSheetIPv4": "IPv4",
+    "cheatSheetHexColor": "Cor Hex",
+    "cheatSheetWords": "Caracteres de palavra",
+    "howItWorks": "Como funciona",
+    "howItWorksDesc": "Insira um padrão de expressão regular e um texto de teste. As correspondências são destacadas em amarelo abaixo.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Validar endereços de email, telefones ou URLs com regex",
+        "Testar correspondência de padrões para extração de dados",
+        "Depurar e refinar expressões regularmente visualmente"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é uma expressão regular?",
+          "answer": "Uma expressão regular (regex) é uma sequência de caracteres que define um padrão de busca. É usada para correspondência de padrões dentro de strings, comumente para validação, busca e operações de substituição."
+        },
+        {
+          "question": "Quais flags estão disponíveis?",
+          "answer": "Flags comuns incluem: g (global - encontrar todas as correspondências), i (maiúsculas/minúsculas), m (multilinha) e s (ponto corresponde a quebra de linha)."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao construir ou depurar expressões regulares",
+        "Ao validar padrões de entrada como emails ou telefones",
+        "Ao testar padrões de extração de dados",
+        "Ao aprender sintaxe de regex"
+      ]
+    }
+  },
+  "hash-generator": {
+    "title": "Gerador de Hash",
+    "description": "Gere hashes criptográficos (MD5, SHA-1, SHA-256, SHA-512) instantaneamente enquanto digita. Usa a Web Crypto API para hashes SHA.",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "inputPlaceholder": "Digite o texto para hashear...",
+    "inputLabel": "Texto de Entrada",
+    "resultLabel": "Hashes",
+    "placeholder": "Digite o texto para hashear...",
+    "hashPlaceholder": "A saída do hash aparecerá aqui",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "successCopy": "Copiado para a área de transferência",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar checksums de arquivo para verificação de integridade",
+        "Hashear senhas para comparação com hashes armazenados",
+        "Criar impressões digitais para deduplicação de dados"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "O que é uma função de hash?",
+          "answer": "Uma função de hash converte dados de entrada em uma string de tamanho fixo. É uma operação unidirecional - não é possível reverter um hash para obter o input original."
+        },
+        {
+          "question": "Qual algoritmo de hash devo usar?",
+          "answer": "SHA-256 ou SHA-512 são recomendados para a maioria das aplicações modernas. MD5 e SHA-1 são considerados legados e devem ser usados apenas para fins não relacionados a segurança, como checksums."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao verificar integridade de arquivos com checksums",
+        "Ao comparar valores hasheados",
+        "Ao gerar impressões digitais de dados para deduplicação",
+        "Ao testar implementações de funções de hash"
+      ]
+    }
+  },
+  "color-picker": {
+    "title": "Seletor e Conversor de Cores",
+    "description": "Selecione uma cor visualmente ou digite um valor HEX. Converte instantaneamente para RGB, RGBA, HSL, HSLA e CMYK com cópia em um clique.",
+    "clear": "Limpar",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "rgbaLabel": "RGBA",
+    "hslLabel": "HSL",
+    "hslaLabel": "HSLA",
+    "cmykLabel": "CMYK",
+    "alpha": "Alpha",
+    "pickerLabel": "Seletor de Cores",
+    "alphaLabel": "Opacidade",
+    "copy": "Copiar",
+    "inputPlaceholder": "#3498db",
+    "successCopy": "Copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Converter cores entre formatos HEX, RGB, HSL e CMYK",
+        "Selecionar cores para design e desenvolvimento web",
+        "Gerar valores RGBA/HSLA com transparência alpha"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Quais formatos de cor são suportados?",
+          "answer": "HEX (#3498db), RGB (rgb(52, 152, 219)), RGBA (rgba(52, 152, 219, 1)), HSL (hsl(204, 70%, 53%)), HSLA (hsla(204, 70%, 53%, 1)) e CMYK (cmyk(76, 29, 0, 14))."
+        },
+        {
+          "question": "O que é transparência alpha?",
+          "answer": "Alpha controla a opacidade de uma cor. 0 é totalmente transparente, 1 é totalmente opaco. Usado nos formatos RGBA e HSLA."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao converter cores entre diferentes padrões de formato",
+        "Ao selecionar cores para desenvolvimento web",
+        "Ao gerar valores de cor com transparência",
+        "Ao trabalhar com design systems e guias de estilo"
+      ]
+    }
+  },
+  "jwt-generator": {
+    "title": "Gerador e Assinador de JWT",
+    "description": "Gere e assine JSON Web Tokens (JWT) com HMAC-SHA256. Todo o processamento acontece no lado do cliente.",
+    "generate": "Gerar Token",
+    "copy": "Copiar",
+    "clear": "Limpar",
+    "headerLabel": "Header (JSON)",
+    "payloadLabel": "Payload (JSON)",
+    "secretLabel": "Chave Secreta",
+    "resultLabel": "Token JWT Gerado",
+    "resultPlaceholder": "O token gerado aparecerá aqui",
+    "successCopy": "Token copiado para a área de transferência",
+    "errorCopy": "Falha ao copiar. Por favor, tente novamente.",
+    "errorInvalid": "JSON inválido no header ou payload",
+    "errorSecret": "Por favor, insira uma chave secreta",
+    "examples": {
+      "title": "Exemplos de uso",
+      "items": [
+        "Gerar tokens JWT para testes de autenticação de API",
+        "Criar tokens assinados com claims personalizados para desenvolvimento",
+        "Testar lógica de validação JWT em suas aplicações"
+      ]
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "items": [
+        {
+          "question": "Como funciona a assinatura JWT?",
+          "answer": "A ferramenta usa HMAC-SHA256 para criar uma assinatura criptográfica do header e payload usando sua chave secreta. A assinatura garante que o token não foi adulterado."
+        },
+        {
+          "question": "A chave secreta é enviada para um servidor?",
+          "answer": "Não. Todo o processamento acontece inteiramente no seu navegador usando a Web Crypto API através da biblioteca jose. A chave secreta nunca sai do seu dispositivo."
+        },
+        {
+          "question": "Quais algoritmos são suportados?",
+          "answer": "Atualmente HMAC-SHA256 (HS256) é suportado. O header pode especificar qualquer algoritmo, mas a assinatura sempre usa HS256."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "Quando utilizar esta ferramenta?",
+      "items": [
+        "Ao gerar tokens JWT de teste para desenvolvimento de API",
+        "Ao testar lógica de validação JWT em suas aplicações",
+        "Ao criar tokens com claims personalizados para desenvolvimento"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "brand": {
+    "name": "VeryKit",
+    "slogan": "One place. Every tool.",
+    "description": "Free tools for QA Engineers and Developers."
+  },
+  "toolNames": {
+    "uuid-generator": "UUID Generator",
+    "password-generator": "Password Generator",
+    "lorem-ipsum-generator": "Lorem Ipsum Generator",
+    "cpf-generator": "CPF Generator & Validator",
+    "json-formatter": "JSON Formatter & Minifier",
+    "base64-converter": "Base64 Encode / Decode",
+    "url-encoder": "URL Encode / Decode",
+    "case-converter": "Case Converter",
+    "timestamp-converter": "Timestamp / Unix Time Converter",
+    "jwt-decoder": "JWT Decoder",
+    "json-compare": "JSON Compare",
+    "credit-card-generator": "Credit Card Test Generator",
+    "cnpj-generator": "CNPJ Generator & Validator",
+    "regex-tester": "Regex Tester",
+    "hash-generator": "Hash Generator",
+    "color-picker": "Color Picker & Converter",
+    "jwt-generator": "JWT Generator & Signer"
+  },
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About",
+    "searchLabel": "Search tools",
+    "searchPlaceholder": "Search tools..."
+  },
+  "actions": {
+    "copy": "Copy",
+    "clear": "Clear",
+    "search": "Search",
+    "toggleTheme": "Toggle theme",
+    "switchLanguage": "Switch language"
+  },
+  "buttons": {
+    "paste": "Paste"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "en": "English",
+    "pt-BR": "Portuguese",
+    "es": "Spanish"
+  },
+  "home": {
+    "title": "VeryKit",
+    "subtitle": "Free tools for QA Engineers and Developers.",
+    "searchPlaceholder": "Search for tools, generators, formatters...",
+    "categories": {
+      "title": "Categories",
+      "data": "Data",
+      "dataDescription": "Generators and validators for test data",
+      "api": "API",
+      "apiDescription": "Format, decode, and transform API payloads",
+      "testing": "Testing",
+      "testingDescription": "Utilities for test case creation and QA workflows",
+      "utilities": "Utilities",
+      "utilitiesDescription": "Text, code, and developer helper tools",
+      "regional": "Regional Tools",
+      "regionalDescription": "Country-specific generators and validators",
+      "others": "Others",
+      "othersDescription": "Additional tools and utilities"
+    },
+    "tools": {
+      "title": "Tools",
+      "description": "Browse all available tools, organized by category"
+    },
+    "about": {
+      "title": "About VeryKit",
+      "description": "VeryKit was born from the need to have a single, clean, fast, and privacy-conscious place for the small utilities that QA Engineers, Test Automation Engineers, and Software Developers use every day. No ads, no tracking, no paywalls. Just tools that work, run locally, and disappear when you're done."
+    }
+  },
+  "about": {
+    "title": "About VeryKit",
+    "description": "VeryKit was born from the need to have a single, clean, fast, and privacy-conscious place for the small utilities that QA Engineers, Test Automation Engineers, and Software Developers use every day.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "VeryKit exists to eliminate the friction of everyday development tasks. Every tool runs entirely in your browser, meaning your data never leaves your device. We believe that utility tools should be fast, accessible, and privacy-respecting by default."
+    },
+    "privacy": {
+      "title": "Privacy First",
+      "description": "No analytics, no tracking, no server-side processing. Every computation happens locally using modern browser APIs like the Web Crypto API. When you close the tab, everything disappears."
+    },
+    "openSource": {
+      "title": "Open Source",
+      "description": "VeryKit is built in the open. Contributions, bug reports, and feature requests are welcome from the community. Check our contributing guidelines to get started."
+    }
+  },
+  "contributing": {
+    "title": "Contributing",
+    "description": "Thank you for your interest in contributing to VeryKit! Here's how you can help.",
+    "reporting": {
+      "title": "Reporting Issues",
+      "description": "Found a bug or have a suggestion? Open an issue on our GitHub repository. Please include:",
+      "items": [
+        "A clear description of the problem or suggestion",
+        "Steps to reproduce (for bugs)",
+        "Your browser and operating system",
+        "Screenshots if applicable"
+      ]
+    },
+    "code": {
+      "title": "Contributing Code",
+      "description": "Want to add a new tool or fix a bug? Here's the process:",
+      "items": [
+        "Fork the repository on GitHub",
+        "Create a feature branch from main",
+        "Follow the existing project patterns (see src/features/ for examples)",
+        "Add tests for your changes",
+        "Ensure all tests pass with npm test",
+        "Submit a pull request with a clear description"
+      ]
+    },
+    "setup": {
+      "title": "Development Setup",
+      "description": "Clone the repository, install dependencies, and start the development server:",
+      "command": "git clone https://github.com/your-username/verykit.git && cd verykit && npm install && npm run dev"
+    }
+  },
+  "security": {
+    "title": "Security",
+    "description": "Your security is important to us. This page explains how to report vulnerabilities and what we do to keep VeryKit safe.",
+    "reporting": {
+      "title": "Reporting Vulnerabilities",
+      "description": "If you discover a security vulnerability in VeryKit, please report it responsibly:",
+      "items": [
+        "Open a private security advisory on our GitHub repository",
+        "Do not disclose the vulnerability publicly until a fix is available",
+        "Include a detailed description of the issue and potential impact",
+        "We will acknowledge your report within 48 hours"
+      ]
+    },
+    "design": {
+      "title": "Security Design",
+      "description": "VeryKit is designed with security in mind:",
+      "items": [
+        "Client-side only: All computations happen in your browser. No data is ever sent to a server.",
+        "No data collection: We do not collect, store, or transmit any user data.",
+        "No tracking: No analytics, cookies, or tracking scripts.",
+        "Web Crypto API: Cryptographic operations use the browser's built-in secure APIs.",
+        "Open source: Our code is publicly auditable on GitHub."
+      ]
+    },
+    "scope": {
+      "title": "Scope",
+      "description": "The following are considered in scope for security reports:",
+      "items": [
+        "Vulnerabilities in the web application code",
+        "Issues with data handling or processing logic",
+        "Cross-site scripting (XSS) vulnerabilities",
+        "Any issue that could compromise user privacy"
+      ]
+    }
+  },
+  "footer": {
+    "description": "Free, open source, privacy-conscious tools for everyday QA and development work.",
+    "repository": "Repository",
+    "contributing": "Contributing",
+    "security": "Security"
+  },
+  "uuid-generator": {
+    "title": "UUID Generator",
+    "description": "Generate random UUIDs (v4) instantly in your browser. No data leaves your device.",
+    "generate": "Generate UUID",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Generated UUID",
+    "resultPlaceholder": "Click \"Generate UUID\" to create a new identifier",
+    "successCopy": "UUID copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate a UUID for a new database record",
+        "Create unique identifiers for API request tracking",
+        "Generate test data for QA and development"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a UUID?",
+          "answer": "A UUID (Universally Unique Identifier) is a 128-bit identifier that is unique across space and time. The v4 format generates a completely random identifier."
+        },
+        {
+          "question": "Does this tool send data to a server?",
+          "answer": "No. All UUID generation happens locally in your browser using the Web Crypto API. No data is sent anywhere."
+        },
+        {
+          "question": "What is the difference between UUID v4 and other versions?",
+          "answer": "UUID v4 is completely random. Other versions like v1 use timestamps and MAC addresses, while v5 uses namespace-based hashing. V4 is the most commonly used format for general purposes."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When you need a unique identifier for database records",
+        "When generating test data for API development or QA testing",
+        "When creating unique IDs for logging, tracking, or session management",
+        "When working on distributed systems that require collision-resistant identifiers"
+      ]
+    }
+  },
+  "password-generator": {
+    "title": "Password Generator",
+    "description": "Generate secure random passwords instantly in your browser. Fully customizable character options. No data leaves your device.",
+    "generate": "Generate Password",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Generated Password",
+    "resultPlaceholder": "Click \"Generate Password\" to create a new password",
+    "successCopy": "Password copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "length": "Password Length",
+    "uppercase": "Uppercase (A-Z)",
+    "lowercase": "Lowercase (a-z)",
+    "numbers": "Numbers (0-9)",
+    "symbols": "Symbols (!@#$...)",
+    "errorNoChars": "Please select at least one character type.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Create a strong password for a new online account",
+        "Generate test passwords for QA and security testing",
+        "Create API keys or tokens for development environments"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How secure are the generated passwords?",
+          "answer": "The passwords are generated using the Web Crypto API, which provides cryptographically secure random values. They are generated entirely in your browser and never sent to any server."
+        },
+        {
+          "question": "Can I customize the password length?",
+          "answer": "Yes. You can set the password length from 4 to 128 characters using the length input field."
+        },
+        {
+          "question": "What character types can I include?",
+          "answer": "You can toggle uppercase letters (A-Z), lowercase letters (a-z), numbers (0-9), and symbols (!@#$%^&* etc.). At least one type must be selected."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When you need a strong, random password for a new account",
+        "When generating test credentials for QA and security testing",
+        "When creating API tokens, secret keys, or session identifiers",
+        "When you want to verify password strength requirements"
+      ]
+    }
+  },
+  "lorem-ipsum-generator": {
+    "title": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text in paragraphs, words, or lists for design mockups and development. No data leaves your device.",
+    "generate": "Generate Text",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Generated Text",
+    "resultPlaceholder": "Click \"Generate Text\" to create placeholder content",
+    "successCopy": "Text copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "count": "Quantity",
+    "typeParagraphs": "Paragraphs",
+    "typeWords": "Words",
+    "typeLists": "Lists",
+    "errorNoType": "Please select a text type.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Fill a web page layout with placeholder text during design",
+        "Generate sample content for blog or CMS testing",
+        "Create text blocks for UI component testing and QA"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is Lorem Ipsum?",
+          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text since the 1500s."
+        },
+        {
+          "question": "How many items can I generate at once?",
+          "answer": "You can generate from 1 to 100 items (paragraphs, words, or list items) in a single operation."
+        },
+        {
+          "question": "Is the generated text random?",
+          "answer": "The paragraphs and lists are drawn from the classic Lorem Ipsum corpus. Words are randomly selected from the corpus to ensure variety."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When designing page layouts and needing placeholder text",
+        "When testing text-heavy components like articles or feeds",
+        "When creating mockups for CMS or blogging platforms",
+        "When developing responsive components that need variable content length"
+      ]
+    }
+  },
+  "cpf-generator": {
+    "title": "CPF Generator & Validator",
+    "description": "Generate and validate Brazilian CPF numbers with the correct check digits. Fully client-side, no data sent anywhere.",
+    "generate": "Generate CPF",
+    "validate": "Validate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "CPF Number",
+    "resultPlaceholder": "Click \"Generate CPF\" or enter a CPF to validate",
+    "successCopy": "CPF copied to clipboard",
+    "successValid": "Valid CPF",
+    "errorInvalid": "Invalid CPF",
+    "errorCopy": "Failed to copy. Please try again.",
+    "inputPlaceholder": "Enter a CPF (e.g. 123.456.789-09)",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate valid CPF numbers for QA testing of Brazilian systems",
+        "Validate user-entered CPFs in form validation logic",
+        "Create test data for financial or government applications"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a CPF?",
+          "answer": "CPF (Cadastro de Pessoas Físicas) is the Brazilian individual taxpayer registration number. It consists of 11 digits, including two check digits calculated using a specific algorithm."
+        },
+        {
+          "question": "Are the generated CPFs real?",
+          "answer": "No. The generator creates CPF numbers that pass the check digit algorithm but are not necessarily registered with the Brazilian IRS (Receita Federal). They are for testing purposes only."
+        },
+        {
+          "question": "How does validation work?",
+          "answer": "Validation checks that the CPF has exactly 11 digits and that the two check digits match the values calculated from the first 9 digits using the official algorithm."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When testing Brazilian forms that require CPF input",
+        "When validating CPF entries in QA and automation testing",
+        "When generating test data for financial or government systems",
+        "When developing CPF validation logic and need reference values"
+      ]
+    }
+  },
+  "json-formatter": {
+    "title": "JSON Formatter & Minifier",
+    "description": "Format, validate, and minify JSON data instantly. Configurable indentation. No data leaves your device.",
+    "format": "Format",
+    "minify": "Minify",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Result",
+    "resultPlaceholder": "Formatted or minified JSON will appear here",
+    "inputPlaceholder": "Paste your JSON here...",
+    "successCopy": "JSON copied to clipboard",
+    "errorInvalid": "Invalid JSON",
+    "errorCopy": "Failed to copy. Please try again.",
+    "indentSize": "Indent Size",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Format an API response for better readability",
+        "Minify a JSON payload before sending it over the network",
+        "Validate JSON data and locate syntax errors"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is JSON formatting?",
+          "answer": "JSON formatting (or pretty-printing) adds indentation and line breaks to JSON data, making it human-readable. Minifying removes all unnecessary whitespace."
+        },
+        {
+          "question": "What indentation sizes are supported?",
+          "answer": "You can choose between 2 or 4 spaces for indentation, or use tab characters."
+        },
+        {
+          "question": "Does this tool work with large JSON files?",
+          "answer": "Yes, the formatting happens entirely in your browser. However, very large files (over 10MB) may take a moment to process depending on your device."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When debugging API responses and need readable JSON",
+        "When preparing JSON data for configuration files",
+        "When validating JSON before sending it to an API",
+        "When reducing payload size by minifying JSON data"
+      ]
+    }
+  },
+  "base64-converter": {
+    "title": "Base64 Encode / Decode",
+    "description": "Encode and decode Base64 strings instantly in your browser. Supports UTF-8 text. No data leaves your device.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Result",
+    "resultPlaceholder": "Encoded or decoded text will appear here",
+    "inputPlaceholder": "Enter text to encode or decode...",
+    "successCopy": "Result copied to clipboard",
+    "errorInvalid": "Invalid Base64 string",
+    "errorDecode": "Failed to decode. The input is not valid Base64.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Encode credentials for HTTP Basic Authentication headers",
+        "Decode Base64-encoded API responses or tokens",
+        "Convert binary data to a text-safe format for transmission"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is Base64?",
+          "answer": "Base64 is an encoding scheme that represents binary data as a string of ASCII characters. It is commonly used to encode data for transmission over text-based protocols like HTTP and email."
+        },
+        {
+          "question": "Does this tool support UTF-8 text?",
+          "answer": "Yes. The encoder and decoder fully support UTF-8, including accented characters, emojis, and non-Latin scripts."
+        },
+        {
+          "question": "Is Base64 encoding secure?",
+          "answer": "No. Base64 is an encoding, not encryption. It is easily reversible and should not be used to protect sensitive data. Use it for data transport, not security."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When encoding credentials for HTTP Basic Authentication",
+        "When decoding Base64-encoded tokens, payloads, or emails",
+        "When embedding binary data (images, files) in JSON or XML",
+        "When debugging data encoding issues in APIs"
+      ]
+    }
+  },
+  "url-encoder": {
+    "title": "URL Encode / Decode",
+    "description": "Encode and decode URL parameters and special characters instantly. Supports full and component encoding. No data leaves your device.",
+    "encode": "Encode",
+    "decode": "Decode",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Result",
+    "resultPlaceholder": "Encoded or decoded URL will appear here",
+    "inputPlaceholder": "Enter a URL or text to encode/decode...",
+    "successCopy": "Result copied to clipboard",
+    "errorInvalid": "Invalid input",
+    "errorDecode": "Failed to decode. The input is not a valid encoded URL.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "encodeMode": "Encoding Mode",
+    "modeFull": "Full (encode all special characters)",
+    "modeComponent": "Component (encode path segments)",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Encode query parameters before constructing a URL",
+        "Decode a URL-encoded string from an API response",
+        "Sanitize user input for use in URL paths"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is URL encoding?",
+          "answer": "URL encoding (percent-encoding) replaces unsafe characters with a % followed by two hexadecimal digits. For example, a space becomes %20."
+        },
+        {
+          "question": "What is the difference between Full and Component encoding?",
+          "answer": "Full encoding (encodeURI) preserves path separators like / and :. Component encoding (encodeURIComponent) encodes everything except letters, digits, and _ . - ~."
+        },
+        {
+          "question": "When should I use URL encoding?",
+          "answer": "Use it when passing data in URL query strings, especially for values containing spaces, special characters, or non-ASCII text."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When building URLs with dynamic query parameters",
+        "When decoding URL-encoded strings from API responses or logs",
+        "When sanitizing user input that will be used in URLs",
+        "When debugging URL encoding/decoding issues"
+      ]
+    }
+  },
+  "case-converter": {
+    "title": "Case Converter",
+    "description": "Convert text between UPPERCASE, lowercase, camelCase, snake_case, kebab-case, PascalCase and more. No data leaves your device.",
+    "convert": "Convert",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Result",
+    "resultPlaceholder": "Converted text will appear here",
+    "inputPlaceholder": "Enter text to convert...",
+    "successCopy": "Text copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "errorEmpty": "Please enter some text to convert.",
+    "inputLabel": "Input Text",
+    "optionsLabel": "Conversion Options",
+    "uppercase": "UPPERCASE",
+    "lowercase": "lowercase",
+    "titleCase": "Title Case",
+    "sentenceCase": "Sentence case",
+    "camelCase": "camelCase",
+    "pascalCase": "PascalCase",
+    "snakeCase": "snake_case",
+    "kebabCase": "kebab-case",
+    "dotCase": "dot.case",
+    "constantCase": "CONSTANT_CASE",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert variable names between camelCase and snake_case when porting code",
+        "Format text for headers, titles, or documentation",
+        "Normalize inconsistent naming conventions in a codebase"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is case conversion?",
+          "answer": "Case conversion transforms text between different naming conventions used in programming and writing, such as camelCase, snake_case, kebab-case, and others."
+        },
+        {
+          "question": "Which case should I use?",
+          "answer": "It depends on context: camelCase for JavaScript variables, snake_case for Python/Ruby, kebab-case for CSS and URLs, PascalCase for class names, UPPER_SNAKE_CASE for constants."
+        },
+        {
+          "question": "Can I convert entire code snippets?",
+          "answer": "Yes, the converter works with any text input. However, it converts all words uniformly, so it's best suited for single identifiers or phrases."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When renaming variables between different language conventions",
+        "When normalizing text for documentation or content management",
+        "When converting CSS class names or URL slugs",
+        "When generating constant names or enum values from descriptive text"
+      ]
+    }
+  },
+  "timestamp-converter": {
+    "title": "Timestamp / Unix Time Converter",
+    "description": "Convert between Unix timestamps and human-readable dates. Supports seconds and milliseconds, UTC and local time. No data leaves your device.",
+    "convert": "Convert",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Result",
+    "resultPlaceholder": "Converted value will appear here",
+    "inputPlaceholder": "Enter a Unix timestamp or date string...",
+    "successCopy": "Result copied to clipboard",
+    "errorInvalid": "Invalid timestamp or date format",
+    "errorCopy": "Failed to copy. Please try again.",
+    "inputLabel": "Input",
+    "currentTimestamp": "Current Timestamp",
+    "seconds": "seconds",
+    "milliseconds": "milliseconds",
+    "utc": "UTC",
+    "local": "Local Time",
+    "timestampUnit": "Timestamp Unit",
+    "timezone": "Timezone",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert a Unix timestamp from an API response to a readable date",
+        "Get the current Unix timestamp for logging or debugging",
+        "Validate timestamp values in QA and automated testing"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a Unix timestamp?",
+          "answer": "A Unix timestamp is the number of seconds (or milliseconds) that have elapsed since January 1, 1970 (the Unix epoch). It is a widely used standard for representing dates and times in computing."
+        },
+        {
+          "question": "What is the difference between seconds and milliseconds?",
+          "answer": "A timestamp in seconds has 10 digits (e.g., 1700000000). A timestamp in milliseconds has 13 digits (e.g., 1700000000000). The tool auto-detects the format."
+        },
+        {
+          "question": "What date formats are accepted?",
+          "answer": "The tool accepts ISO 8601 format (2024-01-15T10:30:00Z) and common date formats. You can also paste a Unix timestamp directly."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When debugging API responses that contain Unix timestamps",
+        "When converting log timestamps to human-readable dates",
+        "When generating current timestamps for testing or documentation",
+        "When validating time-related data in QA and automation"
+      ]
+    }
+  },
+  "jwt-decoder": {
+    "title": "JWT Decoder",
+    "description": "Decode JSON Web Tokens (JWT) instantly. View Header, Payload, and Signature. Detects expired tokens. All processing happens client-side.",
+    "paste": "Paste",
+    "clear": "Clear",
+    "inputPlaceholder": "Paste a JWT token here...",
+    "inputLabel": "JWT Token",
+    "header": "Header",
+    "payload": "Payload",
+    "signature": "Signature",
+    "expired": "Token is EXPIRED",
+    "valid": "Token is valid (not expired)",
+    "issuedAt": "Issued at",
+    "expiresAt": "Expires at",
+    "errorInvalid": "Invalid JWT token. Please check the format.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "successCopy": "Copied to clipboard",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Debug and inspect JWT tokens from API responses",
+        "Verify token claims and expiration dates",
+        "Understand the structure of authentication tokens"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a JWT?",
+          "answer": "A JWT (JSON Web Token) is a compact, URL-safe means of representing claims between two parties. It consists of three parts: header, payload, and signature, separated by dots."
+        },
+        {
+          "question": "Does this tool validate JWT signatures?",
+          "answer": "No. This tool only decodes the token contents for inspection. It does not verify the cryptographic signature, as that requires the signing key."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When debugging authentication issues in API calls",
+        "When you need to inspect token contents quickly",
+        "When checking if a JWT token has expired",
+        "When learning about JWT structure and claims"
+      ]
+    }
+  },
+  "json-compare": {
+    "title": "JSON Compare",
+    "description": "Compare two JSON objects side by side. Highlights added, removed, and changed values visually.",
+    "compare": "Compare",
+    "clear": "Clear",
+    "inputPlaceholder": "Paste JSON here...",
+    "inputLabelA": "JSON A (Original)",
+    "inputLabelB": "JSON B (Modified)",
+    "labelA": "JSON A",
+    "labelB": "JSON B",
+    "placeholderA": "Paste original JSON here...",
+    "placeholderB": "Paste modified JSON here...",
+    "added": "Added",
+    "removed": "Removed",
+    "changed": "Changed",
+    "identical": "JSON objects are identical",
+    "differences": "differences found",
+    "errorInvalid": "One or both inputs are not valid JSON.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "successCopy": "Copied to clipboard",
+    "resultsTitle": "Differences",
+    "copied": "Copied to clipboard",
+    "noDiffs": "JSON objects are identical",
+    "errorEmpty": "Please enter JSON in both fields.",
+    "errorInvalidA": "JSON A is not valid.",
+    "errorInvalidB": "JSON B is not valid.",
+    "errorCompare": "Error comparing JSON.",
+    "legendAdded": "Added",
+    "legendRemoved": "Removed",
+    "legendChanged": "Changed",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Compare two API responses to find differences",
+        "Validate configuration file changes",
+        "Review JSON payload modifications before deployment"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How does JSON comparison work?",
+          "answer": "The tool recursively traverses both JSON objects and compares each key-value pair. Differences are categorized as added (new keys), removed (missing keys), or changed (different values)."
+        },
+        {
+          "question": "Does order of array elements matter?",
+          "answer": "Yes. Array comparison is order-sensitive. Two arrays with the same elements in different order will be flagged as different."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When debugging API response differences",
+        "When comparing configuration files",
+        "When reviewing JSON data changes"
+      ]
+    }
+  },
+  "credit-card-generator": {
+    "title": "Credit Card Test Generator",
+    "description": "Generate valid test credit card numbers for Visa, Mastercard, Amex, and Discover. For sandbox/testing only - not real cards.",
+    "generate": "Generate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Card Number",
+    "resultPlaceholder": "Click Generate to create a test card number",
+    "successCopy": "Card number copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "warning": "TESTING ONLY: These are dummy card numbers for sandbox environments. Never use real card numbers.",
+    "brand": "Card Brand",
+    "brandLabel": "Card Brand",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "amex": "American Express",
+    "discover": "Discover",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate test card numbers for payment form validation",
+        "Test payment gateway integrations in sandbox mode",
+        "Create dummy data for QA testing of checkout flows"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Are these real credit card numbers?",
+          "answer": "No. These are valid test card numbers that pass the Luhn algorithm check but are not associated with any real accounts. They are intended for testing payment forms in sandbox environments."
+        },
+        {
+          "question": "Which card brands are supported?",
+          "answer": "Visa, Mastercard, American Express (Amex), and Discover."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When testing payment form validation",
+        "When integrating with payment gateways in sandbox mode",
+        "When creating test data for QA automation of checkout flows"
+      ]
+    }
+  },
+  "cnpj-generator": {
+    "title": "CNPJ Generator & Validator",
+    "description": "Generate and validate Brazilian CNPJ numbers with correct check digits. Fully client-side, no data sent anywhere.",
+    "generate": "Generate CNPJ",
+    "validate": "Validate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "CNPJ Number",
+    "resultPlaceholder": "Click Generate or enter a CNPJ to validate",
+    "successCopy": "CNPJ copied to clipboard",
+    "successValid": "Valid CNPJ",
+    "errorInvalid": "Invalid CNPJ",
+    "errorCopy": "Failed to copy. Please try again.",
+    "inputPlaceholder": "Enter a CNPJ (e.g. 11.222.333/0001-81)",
+    "inputLabel": "CNPJ Number",
+    "placeholder": "11.222.333/0001-81",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate valid CNPJ numbers for QA testing of Brazilian systems",
+        "Validate user-entered CNPJs in form validation logic",
+        "Create test data for financial or government applications"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a CNPJ?",
+          "answer": "CNPJ (Cadastro Nacional da Pessoa Jurídica) is the Brazilian corporate taxpayer registration number. It consists of 14 digits, including two check digits calculated using a specific algorithm."
+        },
+        {
+          "question": "Are the generated CNPJs real?",
+          "answer": "No. The generator creates CNPJ numbers that pass the check digit algorithm but are not necessarily registered with the Brazilian IRS (Receita Federal). They are for testing purposes only."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When testing Brazilian forms that require CNPJ input",
+        "When validating CNPJ entries in QA and automation testing",
+        "When generating test data for financial or government systems",
+        "When developing CNPJ validation logic"
+      ]
+    }
+  },
+  "regex-tester": {
+    "title": "Regex Tester",
+    "description": "Test regular expressions against text in real time. Highlights matches visually with full group and capture support.",
+    "test": "Test",
+    "clear": "Clear",
+    "regexPlaceholder": "Enter regex pattern (e.g. \\d{3}-\\d{4})",
+    "textPlaceholder": "Enter text to test against the regex...",
+    "regexLabel": "Regular Expression",
+    "textLabel": "Test Text",
+    "patternLabel": "Pattern",
+    "patternPlaceholder": "Enter regex pattern",
+    "flagsLabel": "Flags",
+    "matchCount": "matches found",
+    "flags": "Flags",
+    "matches": "matches found",
+    "noMatches": "No matches found",
+    "matchGroups": "Match Groups",
+    "errorInvalid": "Invalid regular expression",
+    "errorCopy": "Failed to copy. Please try again.",
+    "successCopy": "Copied to clipboard",
+    "invalidPattern": "Invalid regex pattern",
+    "highlightedTitle": "Highlighted Matches",
+    "copy": "Copy",
+    "copied": "Copied to clipboard",
+    "cheatSheetTitle": "Regex Cheat Sheet",
+    "cheatSheetDesc": "Click a pattern to use it",
+    "cheatSheetEmail": "Email",
+    "cheatSheetUrl": "URL",
+    "cheatSheetNumbers": "Numbers only",
+    "cheatSheetPhoneBR": "Phone (BR)",
+    "cheatSheetDate": "Date (DD/MM/YYYY)",
+    "cheatSheetIPv4": "IPv4",
+    "cheatSheetHexColor": "Hex Color",
+    "cheatSheetWords": "Word characters",
+    "howItWorks": "How it works",
+    "howItWorksDesc": "Enter a regular expression pattern and test text. Matches are highlighted in yellow below.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Validate email addresses, phone numbers, or URLs with regex",
+        "Test pattern matching for data extraction",
+        "Debug and refine regular expressions visually"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a regular expression?",
+          "answer": "A regular expression (regex) is a sequence of characters that defines a search pattern. It is used for pattern matching within strings, commonly for validation, search, and replace operations."
+        },
+        {
+          "question": "What flags are available?",
+          "answer": "Common flags include: g (global - find all matches), i (case-insensitive), m (multiline), and s (dot matches newline)."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When building or debugging regular expressions",
+        "When validating input patterns like emails or phone numbers",
+        "When testing data extraction patterns",
+        "When learning regex syntax"
+      ]
+    }
+  },
+  "hash-generator": {
+    "title": "Hash Generator",
+    "description": "Generate cryptographic hashes (MD5, SHA-1, SHA-256, SHA-512) instantly as you type. Uses Web Crypto API for SHA hashes.",
+    "copy": "Copy",
+    "clear": "Clear",
+    "inputPlaceholder": "Enter text to hash...",
+    "inputLabel": "Input Text",
+    "resultLabel": "Hashes",
+    "placeholder": "Enter text to hash...",
+    "hashPlaceholder": "Hash output will appear here",
+    "errorCopy": "Failed to copy. Please try again.",
+    "successCopy": "Copied to clipboard",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate file checksums for integrity verification",
+        "Hash passwords for comparison with stored hashes",
+        "Create fingerprints for data deduplication"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a hash function?",
+          "answer": "A hash function converts input data into a fixed-size string of characters. It is a one-way operation - you cannot reverse a hash to get the original input."
+        },
+        {
+          "question": "Which hash algorithm should I use?",
+          "answer": "SHA-256 or SHA-512 are recommended for most modern applications. MD5 and SHA-1 are considered legacy and should only be used for non-security purposes like checksums."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When verifying file integrity with checksums",
+        "When comparing hashed values",
+        "When generating data fingerprints for deduplication",
+        "When testing hash function implementations"
+      ]
+    }
+  },
+  "color-picker": {
+    "title": "Color Picker & Converter",
+    "description": "Pick a color visually or enter a HEX value. Converts instantly to RGB, RGBA, HSL, HSLA, and CMYK with one-click copy.",
+    "clear": "Clear",
+    "hexLabel": "HEX",
+    "rgbLabel": "RGB",
+    "rgbaLabel": "RGBA",
+    "hslLabel": "HSL",
+    "hslaLabel": "HSLA",
+    "cmykLabel": "CMYK",
+    "alpha": "Alpha",
+    "pickerLabel": "Color Picker",
+    "alphaLabel": "Opacity",
+    "copy": "Copy",
+    "inputPlaceholder": "#3498db",
+    "successCopy": "Copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert colors between HEX, RGB, HSL, and CMYK formats",
+        "Pick colors for web design and development",
+        "Generate RGBA/HSLA values with alpha transparency"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What color formats are supported?",
+          "answer": "HEX (#3498db), RGB (rgb(52, 152, 219)), RGBA (rgba(52, 152, 219, 1)), HSL (hsl(204, 70%, 53%)), HSLA (hsla(204, 70%, 53%, 1)), and CMYK (cmyk(76, 29, 0, 14))."
+        },
+        {
+          "question": "What is alpha transparency?",
+          "answer": "Alpha controls the opacity of a color. 0 is fully transparent, 1 is fully opaque. Used in RGBA and HSLA formats."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting colors between different format standards",
+        "When picking colors for web development",
+        "When generating color values with transparency",
+        "When working with design systems and style guides"
+      ]
+    }
+  },
+  "jwt-generator": {
+    "title": "JWT Generator & Signer",
+    "description": "Generate and sign JSON Web Tokens (JWT) with HMAC-SHA256. All processing happens client-side.",
+    "generate": "Generate Token",
+    "copy": "Copy",
+    "clear": "Clear",
+    "headerLabel": "Header (JSON)",
+    "payloadLabel": "Payload (JSON)",
+    "secretLabel": "Secret Key",
+    "resultLabel": "Generated JWT Token",
+    "resultPlaceholder": "Generated token will appear here",
+    "successCopy": "Token copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "errorInvalid": "Invalid JSON in header or payload",
+    "errorSecret": "Please enter a secret key",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate JWT tokens for API authentication testing",
+        "Create signed tokens with custom claims for development",
+        "Test JWT validation logic in your applications"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How does JWT signing work?",
+          "answer": "The tool uses HMAC-SHA256 to create a cryptographic signature of the header and payload using your secret key. The signature ensures the token hasn't been tampered with."
+        },
+        {
+          "question": "Is the secret key sent to a server?",
+          "answer": "No. All processing happens entirely in your browser using the Web Crypto API via the jose library. The secret never leaves your device."
+        },
+        {
+          "question": "What algorithms are supported?",
+          "answer": "Currently HMAC-SHA256 (HS256) is supported. The header can specify any algorithm, but the signing always uses HS256."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When generating test JWT tokens for API development",
+        "When testing JWT validation logic in your applications",
+        "When creating tokens with custom claims for development"
+      ]
+    }
+  }
+}
