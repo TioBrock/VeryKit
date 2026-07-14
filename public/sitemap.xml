@@ -3,19 +3,19 @@
   <!-- Home pages -->
   <url>
     <loc>https://verykit.vercel.app/en</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/pt-BR</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/es</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -23,19 +23,19 @@
   <!-- Info pages -->
   <url>
     <loc>https://verykit.vercel.app/en/about</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/contributing</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/security</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -43,25 +43,43 @@
   <!-- Data tools -->
   <url>
     <loc>https://verykit.vercel.app/en/tools/uuid-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/password-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/lorem-ipsum-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/credit-card-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/csv-json-converter</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/number-base-converter</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/byte-converter</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -69,37 +87,87 @@
   <!-- API tools -->
   <url>
     <loc>https://verykit.vercel.app/en/tools/json-formatter</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/json-compare</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/base64-converter</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/url-encoder</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/jwt-decoder</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/jwt-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/curl-to-code</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/user-agent-parser</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/mime-type-checker</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Testing tools -->
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/boundary-value-calculator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/test-data-generator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/bdd-gherkin-builder</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/http-status-codes</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/xpath-css-builder</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -107,45 +175,101 @@
   <!-- Utilities tools -->
   <url>
     <loc>https://verykit.vercel.app/en/tools/case-converter</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/timestamp-converter</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/regex-tester</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/hash-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/color-picker</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/markdown-html-converter</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/markdown-pdf-converter</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/text-binary-converter</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Regional tools -->
+  <!-- Regional tools (Brazil) -->
   <url>
     <loc>https://verykit.vercel.app/en/tools/br/cpf-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://verykit.vercel.app/en/tools/br/cnpj-generator</loc>
-    <lastmod>2025-07-12</lastmod>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/br/cep-generator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/br/renavam-generator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/br/pix-key-generator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Others tools -->
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/chmod-calculator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/qr-code-generator</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://verykit.vercel.app/en/tools/aspect-ratio-calculator</loc>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
