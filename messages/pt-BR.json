@@ -48,7 +48,9 @@
     "tools": "Ferramentas",
     "about": "Sobre",
     "searchLabel": "Buscar ferramentas",
-    "searchPlaceholder": "Buscar ferramentas..."
+    "searchPlaceholder": "Buscar ferramentas...",
+    "backToHome": "Voltar ao Início",
+    "backToTools": "Voltar às Ferramentas"
   },
   "actions": {
     "copy": "Copiar",
