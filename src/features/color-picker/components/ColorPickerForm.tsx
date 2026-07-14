@@ -4,7 +4,7 @@ import { useState, useCallback, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Copy, Trash2, Check, HelpCircle, Lightbulb, Wrench } from "lucide-react";
 
-import { hexToColorFormats, isValidHex, normalizeHex } from "@/features/color-picker/utils/convert";
+import { hexToColorFormats, isValidHex, normalizeHex, contrastRatio, wcagLevel } from "@/features/color-picker/utils/convert";
 
 type CopiedField = "hex" | "rgb" | "rgba" | "hsl" | "hsla" | "cmyk" | null;
 
@@ -14,6 +14,8 @@ export function ColorPickerForm() {
   const [alpha, setAlpha] = useState(1);
   const [copiedField, setCopiedField] = useState<CopiedField>(null);
   const [copyError, setCopyError] = useState(false);
+  const [fgColor, setFgColor] = useState("#3b82f6");
+  const [bgColor, setBgColor] = useState("#ffffff");
 
   const normalizedHex = useMemo(() => {
     if (!isValidHex(hex)) return null;
@@ -24,6 +26,16 @@ export function ColorPickerForm() {
     if (!normalizedHex) return null;
     return hexToColorFormats(normalizedHex, alpha);
   }, [normalizedHex, alpha]);
+
+  const normalizedFg = useMemo(() => (isValidHex(fgColor) ? normalizeHex(fgColor) : null), [fgColor]);
+  const normalizedBg = useMemo(() => (isValidHex(bgColor) ? normalizeHex(bgColor) : null), [bgColor]);
+
+  const ratio = useMemo(() => {
+    if (!normalizedFg || !normalizedBg) return null;
+    return contrastRatio(normalizedFg, normalizedBg);
+  }, [normalizedFg, normalizedBg]);
+
+  const levels = useMemo(() => (ratio !== null ? wcagLevel(ratio) : null), [ratio]);
 
   const handleHexInput = useCallback((value: string) => {
     const cleaned = value.startsWith("#") ? value : `#${value}`;
@@ -177,6 +189,85 @@ export function ColorPickerForm() {
         {copyError && (
           <p className="text-sm text-destructive" role="alert">{t("errorCopy")}</p>
         )}
+
+        <div className="rounded-lg border border-border bg-card p-6">
+          <h2 className="mb-4 text-lg font-semibold text-foreground">{t("contrastTitle")}</h2>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
+            <div className="flex flex-col gap-2">
+              <label htmlFor="contrast-fg" className="text-sm font-medium text-foreground">
+                {t("foregroundLabel")}
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  id="contrast-fg"
+                  type="color"
+                  value={normalizedFg ?? "#000000"}
+                  onChange={(e) => setFgColor(e.target.value)}
+                  className="h-10 w-12 cursor-pointer rounded-md border border-input bg-transparent"
+                />
+                <input
+                  type="text"
+                  value={fgColor}
+                  onChange={(e) => setFgColor(e.target.value)}
+                  className="h-10 w-28 rounded-md border border-input bg-muted/50 px-3 font-mono text-sm text-foreground outline-none"
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="contrast-bg" className="text-sm font-medium text-foreground">
+                {t("backgroundLabel")}
+              </label>
+              <div className="flex items-center gap-2">
+                <input
+                  id="contrast-bg"
+                  type="color"
+                  value={normalizedBg ?? "#ffffff"}
+                  onChange={(e) => setBgColor(e.target.value)}
+                  className="h-10 w-12 cursor-pointer rounded-md border border-input bg-transparent"
+                />
+                <input
+                  type="text"
+                  value={bgColor}
+                  onChange={(e) => setBgColor(e.target.value)}
+                  className="h-10 w-28 rounded-md border border-input bg-muted/50 px-3 font-mono text-sm text-foreground outline-none"
+                />
+              </div>
+            </div>
+          </div>
+
+          {ratio !== null && levels && (
+            <div className="mt-4 flex flex-col gap-3">
+              <div className="text-sm font-medium text-foreground">
+                {t("contrastRatio")}: <span className="font-mono">{ratio.toFixed(2)}:1</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {([
+                  { key: "aaNormal", pass: levels.aa },
+                  { key: "aaLarge", pass: levels.aaLarge },
+                  { key: "aaaNormal", pass: levels.aaa },
+                  { key: "aaaLarge", pass: levels.aaaLarge },
+                ] as const).map((item) => (
+                  <span
+                    key={item.key}
+                    className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-medium ${
+                      item.pass
+                        ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                        : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
+                    }`}
+                  >
+                    {t(item.key)}: {item.pass ? t("pass") : t("fail")}
+                  </span>
+                ))}
+              </div>
+              <div
+                className="mt-2 rounded-md border border-border p-4 text-center text-sm"
+                style={{ backgroundColor: normalizedBg ?? "#ffffff", color: normalizedFg ?? "#000000" }}
+              >
+                {t("previewText")}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="rounded-lg border border-border bg-card p-6">

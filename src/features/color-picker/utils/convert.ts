@@ -96,3 +96,30 @@ export function normalizeHex(hex: string): string {
   }
   return `#${cleaned}`;
 }
+
+export function relativeLuminance(r: number, g: number, b: number): number {
+  const [rs, gs, bs] = [r, g, b].map((c) => {
+    const srgb = c / 255;
+    return srgb <= 0.03928 ? srgb / 12.92 : Math.pow((srgb + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+}
+
+export function contrastRatio(hex1: string, hex2: string): number {
+  const c1 = hexToRgb(hex1);
+  const c2 = hexToRgb(hex2);
+  const l1 = relativeLuminance(c1.r, c1.g, c1.b);
+  const l2 = relativeLuminance(c2.r, c2.g, c2.b);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+export function wcagLevel(ratio: number): { aa: boolean; aaLarge: boolean; aaa: boolean; aaaLarge: boolean } {
+  return {
+    aa: ratio >= 4.5,
+    aaLarge: ratio >= 3.0,
+    aaa: ratio >= 7.0,
+    aaaLarge: ratio >= 4.5,
+  };
+}

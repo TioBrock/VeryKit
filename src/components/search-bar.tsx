@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { Search, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -9,7 +10,28 @@ import { ToolCard } from "@/components/tool-card";
 
 export function SearchBar() {
   const t = useTranslations();
-  const [query, setQuery] = useState("");
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [query, setQuery] = useState(() => searchParams.get("q") ?? "");
+
+  // Update local query state when URL parameter changes externally
+  const qParam = searchParams.get("q") ?? "";
+  useEffect(() => {
+    setQuery(qParam);
+  }, [qParam]);
+
+  const handleQueryChange = (val: string) => {
+    setQuery(val);
+    const params = new URLSearchParams(searchParams.toString());
+    if (val) {
+      params.set("q", val);
+    } else {
+      params.delete("q");
+    }
+    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+  };
 
   const results = useMemo(() => {
     if (!query.trim()) return [];
@@ -41,17 +63,18 @@ export function SearchBar() {
           className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground"
         />
         <input
-          type="search"
+          type="text"
           aria-label={t("home.searchPlaceholder")}
           placeholder={t("home.searchPlaceholder")}
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => handleQueryChange(e.target.value)}
+          autoComplete="off"
           className="h-14 w-full rounded-xl border border-border bg-background pl-12 pr-12 text-base text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-brand-blue"
         />
         {query && (
           <button
             type="button"
-            onClick={() => setQuery("")}
+            onClick={() => handleQueryChange("")}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
             aria-label="Clear search"
           >
@@ -70,7 +93,7 @@ export function SearchBar() {
             </div>
           ) : (
             <p className="py-8 text-center text-sm text-muted-foreground">
-              No tools found for &ldquo;{query}&rdquo;
+              {t("home.noResults", { query })}
             </p>
           )}
         </div>
@@ -78,3 +101,4 @@ export function SearchBar() {
     </div>
   );
 }
+

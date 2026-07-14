@@ -4,7 +4,12 @@ import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { Copy, Trash2, Check, HelpCircle, Lightbulb, Wrench } from "lucide-react";
 
-import { generatePassword } from "@/features/password-generator/utils/generate";
+import {
+  generatePassword,
+  calculateStrength,
+  getCharsetSize,
+  type StrengthLevel,
+} from "@/features/password-generator/utils/generate";
 
 export function PasswordGeneratorForm() {
   const t = useTranslations("password-generator");
@@ -18,6 +23,12 @@ export function PasswordGeneratorForm() {
   const [lowercase, setLowercase] = useState(true);
   const [numbers, setNumbers] = useState(true);
   const [symbols, setSymbols] = useState(false);
+  const [excludeAmbiguous, setExcludeAmbiguous] = useState(false);
+
+  const strength = calculateStrength(
+    password.length || length,
+    password.length > 0 ? getCharsetSize({ length, uppercase, lowercase, numbers, symbols, excludeAmbiguous }) : getCharsetSize({ length, uppercase, lowercase, numbers, symbols, excludeAmbiguous })
+  );
 
   const handleGenerate = useCallback(() => {
     if (!uppercase && !lowercase && !numbers && !symbols) {
@@ -26,7 +37,7 @@ export function PasswordGeneratorForm() {
       return;
     }
     try {
-      const result = generatePassword({ length, uppercase, lowercase, numbers, symbols });
+      const result = generatePassword({ length, uppercase, lowercase, numbers, symbols, excludeAmbiguous });
       setPassword(result);
       setError(false);
       setCopied(false);
@@ -34,7 +45,7 @@ export function PasswordGeneratorForm() {
     } catch {
       setError(true);
     }
-  }, [length, uppercase, lowercase, numbers, symbols]);
+  }, [length, uppercase, lowercase, numbers, symbols, excludeAmbiguous]);
 
   const handleCopy = useCallback(async () => {
     if (!password) return;
@@ -91,7 +102,7 @@ export function PasswordGeneratorForm() {
             className="w-full accent-brand-blue"
           />
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             <label className="flex items-center gap-2 text-sm text-foreground">
               <input
                 type="checkbox"
@@ -128,6 +139,50 @@ export function PasswordGeneratorForm() {
               />
               {t("symbols")}
             </label>
+            <label className="flex items-center gap-2 text-sm text-foreground">
+              <input
+                type="checkbox"
+                checked={excludeAmbiguous}
+                onChange={(e) => setExcludeAmbiguous(e.target.checked)}
+                className="h-4 w-4 accent-brand-blue"
+              />
+              {t("excludeAmbiguous")}
+            </label>
+          </div>
+
+          {/* Strength Meter */}
+          <div>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-foreground">{t("strength")}</span>
+              <span className={`text-sm font-medium ${
+                strength.level === "veryWeak" ? "text-red-500" :
+                strength.level === "weak" ? "text-orange-500" :
+                strength.level === "fair" ? "text-yellow-500" :
+                strength.level === "strong" ? "text-green-500" :
+                "text-green-700"
+              }`}>
+                {t(strength.level)}
+              </span>
+            </div>
+            <div className="flex gap-1.5">
+              {(["veryWeak", "weak", "fair", "strong", "veryStrong"] as StrengthLevel[]).map((level, i) => {
+                const filled = ["veryWeak", "weak", "fair", "strong", "veryStrong"].indexOf(strength.level) >= i;
+                return (
+                  <div
+                    key={level}
+                    className={`h-2 flex-1 rounded-full transition-colors ${
+                      filled
+                        ? level === "veryWeak" ? "bg-red-500" :
+                          level === "weak" ? "bg-orange-500" :
+                          level === "fair" ? "bg-yellow-500" :
+                          level === "strong" ? "bg-green-500" :
+                          "bg-green-700"
+                        : "bg-muted"
+                    }`}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,8 @@
+"use client";
+
+import { useState, useEffect, type KeyboardEvent } from "react";
 import Link from "next/link";
+import { useRouter, useParams, usePathname } from "next/navigation";
 import { Search } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -12,6 +16,24 @@ type HeaderProps = {
 
 export function Header({ locale }: HeaderProps) {
   const t = useTranslations();
+  const router = useRouter();
+  const params = useParams();
+  const pathname = usePathname();
+  const [mobileQuery, setMobileQuery] = useState("");
+  const [desktopQuery, setDesktopQuery] = useState("");
+
+  // Clear search inputs when pathname changes
+  useEffect(() => {
+    setMobileQuery("");
+    setDesktopQuery("");
+  }, [pathname]);
+
+  const handleSearch = (value: string) => {
+    const trimmed = value.trim();
+    if (!trimmed) return;
+    const currentLocale = params.locale as string;
+    router.push(`/${currentLocale}/?q=${encodeURIComponent(trimmed)}`);
+  };
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
@@ -36,9 +58,17 @@ export function Header({ locale }: HeaderProps) {
             className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground"
           />
           <input
-            type="search"
+            type="text"
             aria-label={t("navigation.searchLabel")}
             placeholder={t("navigation.searchPlaceholder")}
+            value={mobileQuery}
+            onChange={(e) => setMobileQuery(e.target.value)}
+            onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+              if (e.key === "Enter") {
+                handleSearch(mobileQuery);
+                setMobileQuery("");
+              }
+            }}
             className="h-14 w-full rounded-xl border border-border bg-background pl-12 pr-12 text-base text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-brand-blue"
           />
         </div>
@@ -61,9 +91,17 @@ export function Header({ locale }: HeaderProps) {
               className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground"
             />
             <input
-              type="search"
+              type="text"
               aria-label={t("navigation.searchLabel")}
               placeholder={t("navigation.searchPlaceholder")}
+              value={desktopQuery}
+              onChange={(e) => setDesktopQuery(e.target.value)}
+              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+                if (e.key === "Enter") {
+                  handleSearch(desktopQuery);
+                  setDesktopQuery("");
+                }
+              }}
               className="h-full w-full rounded-xl border border-border bg-background pl-12 pr-12 text-base text-foreground shadow-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-brand-blue"
             />
           </div>

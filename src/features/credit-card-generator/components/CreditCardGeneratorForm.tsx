@@ -5,39 +5,46 @@ import { useTranslations } from "next-intl";
 import { Copy, Trash2, Check, HelpCircle, Lightbulb, Wrench, AlertTriangle } from "lucide-react";
 
 import {
-  generateCardNumber,
-  formatCardNumber,
   CARD_BRANDS,
+  generateCardData,
   type CardBrand,
+  type CardData,
 } from "@/features/credit-card-generator/utils/generate";
+
+const BRAND_STYLES: Record<CardBrand, string> = {
+  visa: "from-blue-600 to-blue-800",
+  mastercard: "from-orange-500 to-red-600",
+  amex: "from-indigo-500 to-indigo-700",
+  discover: "from-amber-500 to-orange-600",
+};
 
 export function CreditCardGeneratorForm() {
   const t = useTranslations("credit-card-generator");
   const [brand, setBrand] = useState<CardBrand>("visa");
-  const [cardNumber, setCardNumber] = useState("");
+  const [cardData, setCardData] = useState<CardData | null>(null);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
 
   const handleGenerate = useCallback(() => {
-    setCardNumber(formatCardNumber(generateCardNumber(brand)));
+    setCardData(generateCardData(brand));
     setCopied(false);
     setCopyError(false);
   }, [brand]);
 
   const handleCopy = useCallback(async () => {
-    if (!cardNumber) return;
+    if (!cardData) return;
     try {
-      await navigator.clipboard.writeText(cardNumber.replace(/\s/g, ""));
+      await navigator.clipboard.writeText(cardData.number.replace(/\s/g, ""));
       setCopied(true);
       setCopyError(false);
     } catch {
       setCopied(false);
       setCopyError(true);
     }
-  }, [cardNumber]);
+  }, [cardData]);
 
   const handleClear = useCallback(() => {
-    setCardNumber("");
+    setCardData(null);
     setCopied(false);
     setCopyError(false);
   }, []);
@@ -99,18 +106,55 @@ export function CreditCardGeneratorForm() {
           {t("generate")}
         </button>
 
-        {cardNumber && (
-          <div>
-            <label htmlFor="card-result" className="mb-2 block text-sm font-medium text-foreground">
-              {t("resultLabel")}
-            </label>
-            <input
-              id="card-result"
-              type="text"
-              readOnly
-              value={cardNumber}
-              className="h-12 w-full rounded-md border border-input bg-muted/50 px-4 font-mono text-sm text-foreground outline-none"
-            />
+        {cardData && (
+          <div className="flex flex-col items-center gap-6 pt-2">
+            {/* Virtual Card */}
+            <div
+              className={`relative w-full max-w-md overflow-hidden rounded-2xl bg-gradient-to-br ${BRAND_STYLES[cardData.brand]} p-6 shadow-xl sm:p-8`}
+              style={{ aspectRatio: "1.586 / 1" }}
+            >
+              <div className="flex h-full flex-col justify-between text-white">
+                {/* Top row: brand name */}
+                <div className="flex items-start justify-between">
+                  <div className="h-8 w-12 rounded bg-white/20" aria-hidden="true" />
+                  <span className="text-lg font-bold uppercase tracking-wide opacity-90">
+                    {CARD_BRANDS.find((b) => b.id === cardData.brand)?.name}
+                  </span>
+                </div>
+
+                {/* Card number */}
+                <div className="font-mono text-xl tracking-widest sm:text-2xl">
+                  {cardData.number}
+                </div>
+
+                {/* Bottom row: name + expiry */}
+                <div className="flex items-end justify-between gap-4 text-xs sm:text-sm">
+                  <div className="min-w-0 flex-1">
+                    <p className="mb-0.5 text-[10px] uppercase tracking-wider opacity-70">
+                      {t("cardName")}
+                    </p>
+                    <p className="truncate font-medium uppercase tracking-wide">
+                      {cardData.name}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="mb-0.5 text-[10px] uppercase tracking-wider opacity-70">
+                      {t("cardExpiry")}
+                    </p>
+                    <p className="font-medium">{cardData.expiry}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CVV */}
+            <div className="flex flex-col items-center gap-1">
+              <div className="rounded-lg border border-border bg-muted/50 px-6 py-3 font-mono text-sm text-foreground">
+                <span className="text-xs text-muted-foreground">{t("cardCVV")}: </span>
+                <span className="font-semibold">{cardData.cvv}</span>
+              </div>
+              <p className="text-xs text-muted-foreground">{t("cardCvvNote")}</p>
+            </div>
           </div>
         )}
 
@@ -118,7 +162,7 @@ export function CreditCardGeneratorForm() {
           <button
             type="button"
             onClick={handleCopy}
-            disabled={!cardNumber}
+            disabled={!cardData}
             className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
           >
             {copied ? (
@@ -131,7 +175,7 @@ export function CreditCardGeneratorForm() {
           <button
             type="button"
             onClick={handleClear}
-            disabled={!cardNumber}
+            disabled={!cardData}
             className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
           >
             <Trash2 className="h-4 w-4" aria-hidden="true" />

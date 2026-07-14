@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { GitFork } from "lucide-react";
 
 type FooterProps = {
   locale: string;
@@ -25,6 +26,15 @@ export function Footer({ locale }: FooterProps) {
           <Link className="rounded-sm outline-none transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-brand-blue" href={`/${locale}/security`}>
             {t("footer.security")}
           </Link>
+          <a
+            className="inline-flex items-center gap-1.5 rounded-sm outline-none transition-colors hover:text-foreground focus-visible:ring-2 focus-visible:ring-brand-blue"
+            href="https://github.com/TioBrock/VeryKit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GitFork className="h-4 w-4" aria-hidden="true" />
+            {t("footer.repository")}
+          </a>
         </nav>
       </div>
     </footer>

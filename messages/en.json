@@ -21,7 +21,27 @@
     "regex-tester": "Regex Tester",
     "hash-generator": "Hash Generator",
     "color-picker": "Color Picker & Converter",
-    "jwt-generator": "JWT Generator & Signer"
+    "jwt-generator": "JWT Generator & Signer",
+    "curl-to-code": "cURL to Code Converter",
+    "user-agent-parser": "User-Agent Parser",
+    "mime-type-checker": "MIME Type Checker",
+    "boundary-value-calculator": "Boundary Value Calculator",
+    "http-status-codes": "HTTP Status Code Reference",
+    "xpath-css-builder": "XPath & CSS Selector Builder",
+    "cep-generator": "CEP Generator & Validator",
+    "renavam-generator": "Renavam Generator & Validator",
+    "pix-key-generator": "PIX Key Generator",
+    "number-base-converter": "Number Base Converter",
+    "byte-converter": "Byte Converter",
+    "csv-json-converter": "CSV ⇄ JSON Converter",
+    "chmod-calculator": "Chmod Calculator",
+    "qr-code-generator": "QR Code Generator",
+    "aspect-ratio-calculator": "Aspect Ratio Calculator",
+    "test-data-generator": "Test Data Table Generator",
+    "bdd-gherkin-builder": "BDD / Gherkin Snippet Builder",
+    "markdown-html-converter": "Markdown ⇄ HTML Converter",
+    "text-binary-converter": "Text ⇄ Binary Converter",
+    "markdown-pdf-converter": "Markdown → PDF"
   },
   "navigation": {
     "home": "Home",
@@ -73,6 +93,7 @@
       "title": "Tools",
       "description": "Browse all available tools, organized by category"
     },
+    "noResults": "No tools found for \"{query}\"",
     "about": {
       "title": "About VeryKit",
       "description": "VeryKit was born from the need to have a single, clean, fast, and privacy-conscious place for the small utilities that QA Engineers, Test Automation Engineers, and Software Developers use every day. No ads, no tracking, no paywalls. Just tools that work, run locally, and disappear when you're done."
@@ -122,7 +143,7 @@
     "setup": {
       "title": "Development Setup",
       "description": "Clone the repository, install dependencies, and start the development server:",
-      "command": "git clone https://github.com/your-username/verykit.git && cd verykit && npm install && npm run dev"
+      "command": "git clone https://github.com/TioBrock/VeryKit.git && cd VeryKit && npm install && npm run dev"
     }
   },
   "security": {
@@ -226,8 +247,14 @@
     "lowercase": "Lowercase (a-z)",
     "numbers": "Numbers (0-9)",
     "symbols": "Symbols (!@#$...)",
+    "excludeAmbiguous": "Exclude ambiguous characters (1, l, I, O, 0)",
+    "strength": "Strength",
+    "veryWeak": "Very Weak",
+    "weak": "Weak",
+    "fair": "Fair",
+    "strong": "Strong",
+    "veryStrong": "Very Strong",
     "errorNoChars": "Please select at least one character type.",
-    "errorCopy": "Failed to copy. Please try again.",
     "examples": {
       "title": "Examples of use",
       "items": [
@@ -327,6 +354,11 @@
     "errorInvalid": "Invalid CPF",
     "errorCopy": "Failed to copy. Please try again.",
     "inputPlaceholder": "Enter a CPF (e.g. 123.456.789-09)",
+    "singleMode": "Single",
+    "batchMode": "Batch",
+    "batchCount": "Quantity",
+    "generateBatch": "Generate Batch",
+    "batchResultLabel": "Generated CPFs",
     "examples": {
       "title": "Examples of use",
       "items": [
@@ -779,7 +811,11 @@
         "When integrating with payment gateways in sandbox mode",
         "When creating test data for QA automation of checkout flows"
       ]
-    }
+    },
+    "cardName": "Cardholder Name",
+    "cardExpiry": "Expiry",
+    "cardCVV": "CVV",
+    "cardCvvNote": "For testing only - not verified by payment gateways"
   },
   "cnpj-generator": {
     "title": "CNPJ Generator & Validator",
@@ -797,6 +833,11 @@
     "inputPlaceholder": "Enter a CNPJ (e.g. 11.222.333/0001-81)",
     "inputLabel": "CNPJ Number",
     "placeholder": "11.222.333/0001-81",
+    "singleMode": "Single",
+    "batchMode": "Batch",
+    "batchCount": "Quantity",
+    "generateBatch": "Generate Batch",
+    "batchResultLabel": "Generated CNPJs",
     "examples": {
       "title": "Examples of use",
       "items": [
@@ -976,6 +1017,17 @@
         }
       ]
     },
+    "contrastTitle": "WCAG Contrast Checker",
+    "foregroundLabel": "Foreground (Text)",
+    "backgroundLabel": "Background",
+    "contrastRatio": "Contrast Ratio",
+    "aaNormal": "AA Normal Text",
+    "aaLarge": "AA Large Text",
+    "aaaNormal": "AAA Normal Text",
+    "aaaLarge": "AAA Large Text",
+    "pass": "Pass",
+    "fail": "Fail",
+    "previewText": "Sample text for contrast check",
     "whenToUse": {
       "title": "When to use this tool?",
       "items": [
@@ -1034,5 +1086,1025 @@
         "When creating tokens with custom claims for development"
       ]
     }
+  },
+  "boundary-value-calculator": {
+    "title": "Boundary Value Calculator",
+    "description": "Calculate exact boundary values for test cases from any numeric range. Essential for QA boundary testing.",
+    "calculate": "Calculate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "copied": "Copied to clipboard",
+    "minLabel": "Min Value",
+    "maxLabel": "Max Value",
+    "resultLabel": "Boundary Values",
+    "boundaryBelow": "Below Min (Min - 1)",
+    "boundaryMin": "Minimum",
+    "boundaryMinAbove": "Above Min (Min + 1)",
+    "boundaryMaxBelow": "Below Max (Max - 1)",
+    "boundaryMax": "Maximum",
+    "boundaryAbove": "Above Max (Max + 1)",
+    "errorEmpty": "Please enter both Min and Max values.",
+    "errorInvalid": "Please enter valid numbers.",
+    "errorRange": "Min must be less than Max.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Calculate boundary values for an age field with range 18-65",
+        "Generate edge cases for a numeric input with min 0 and max 100",
+        "Find exact boundary values for a quantity field ranging from 1-50"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is Boundary Value Analysis?",
+          "answer": "Boundary Value Analysis (BVA) is a testing technique where test cases are designed to include values at the boundaries of input domains. It is based on the observation that errors tend to occur near the extreme values of input ranges."
+        },
+        {
+          "question": "Why test at boundaries?",
+          "answer": "Most defects in software occur at the edges of input ranges rather than in the middle. Testing boundary values (Min-1, Min, Min+1, Max-1, Max, Max+1) catches off-by-one errors and range validation bugs."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When writing test cases for numeric input fields with defined ranges",
+        "When performing equivalence partitioning and boundary analysis",
+        "When validating min/max constraints in forms or APIs"
+      ]
+    }
+  },
+  "http-status-codes": {
+    "title": "HTTP Status Code Reference",
+    "description": "Instant lookup for HTTP status codes. Search by code to see title, description, and when to use.",
+    "searchPlaceholder": "Search by code (e.g. 404, 500)...",
+    "allCodes": "All Codes",
+    "noResults": "No status codes found matching \"{search}\"",
+    "information": "Informational",
+    "success": "Success",
+    "redirection": "Redirection",
+    "clientError": "Client Error",
+    "serverError": "Server Error",
+    "code": "Code",
+    "colTitle": "Title",
+    "colDescription": "Description",
+    "usage": "Usage",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Look up what a 429 status code means when debugging rate limiting",
+        "Quickly reference status codes when writing API error handling",
+        "Check the correct status code to return for a new API endpoint"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What are HTTP status codes?",
+          "answer": "HTTP status codes are three-digit numbers returned by a server in response to a client's request. They indicate whether the request was successful, redirected, or resulted in an error."
+        },
+        {
+          "question": "What do the categories mean?",
+          "answer": "1xx are informational, 2xx indicate success, 3xx are redirections, 4xx are client errors (bad request, not found, etc.), and 5xx are server errors (internal error, service unavailable, etc.)."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When debugging API responses and need to understand a status code",
+        "When implementing error handling and need the right response codes",
+        "When writing API documentation that references status codes"
+      ]
+    },
+    "codes": {
+      "100": { "title": "Continue", "description": "The server has received the request headers and the client should proceed to send the request body." },
+      "101": { "title": "Switching Protocols", "description": "The server is switching protocols as requested by the client via the Upgrade header." },
+      "102": { "title": "Processing", "description": "The server has received and is processing the request, but no response is available yet." },
+      "103": { "title": "Early Hints", "description": "Used to return some response headers before final HTTP message." },
+      "200": { "title": "OK", "description": "The request has succeeded. The meaning depends on the method used." },
+      "201": { "title": "Created", "description": "The request has been fulfilled and resulted in a new resource being created." },
+      "202": { "title": "Accepted", "description": "The request has been accepted for processing, but the processing has not been completed." },
+      "203": { "title": "Non-Authoritative Information", "description": "The request was successful, but the returned meta-information is not from the original server." },
+      "204": { "title": "No Content", "description": "The server successfully processed the request and is not returning any content." },
+      "205": { "title": "Reset Content", "description": "The server successfully processed the request, but is not returning any content." },
+      "206": { "title": "Partial Content", "description": "The server is delivering only part of the resource due to a Range header in the request." },
+      "207": { "title": "Multi-Status", "description": "The message body that follows is an XML message and can contain a number of separate response codes." },
+      "208": { "title": "Already Reported", "description": "The members of a DAV binding have already been enumerated in a previous reply." },
+      "226": { "title": "IM Used", "description": "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations." },
+      "300": { "title": "Multiple Choices", "description": "Indicates multiple options for the resource from which the client may choose." },
+      "301": { "title": "Moved Permanently", "description": "This and all future requests should be directed to the given URI." },
+      "302": { "title": "Found", "description": "Tells the client to look at another URL." },
+      "303": { "title": "See Other", "description": "The response to the request can be found under another URI using a GET method." },
+      "304": { "title": "Not Modified", "description": "Indicates the resource has not been modified since the version specified by the request headers." },
+      "305": { "title": "Use Proxy", "description": "The requested resource is available only through a proxy." },
+      "306": { "title": "Unused", "description": "This status code was used in a previous version of the specification but is now unused." },
+      "307": { "title": "Temporary Redirect", "description": "The request should be repeated with another URI but future requests should still use the original URI." },
+      "308": { "title": "Permanent Redirect", "description": "The request and all future requests should be repeated using another URI." },
+      "400": { "title": "Bad Request", "description": "The server cannot or will not process the request due to an apparent client error." },
+      "401": { "title": "Unauthorized", "description": "Authentication is required and has either failed or not been provided." },
+      "402": { "title": "Payment Required", "description": "Reserved for future use." },
+      "403": { "title": "Forbidden", "description": "The request was valid, but the server is refusing action." },
+      "404": { "title": "Not Found", "description": "The requested resource could not be found but may be available in the future." },
+      "405": { "title": "Method Not Allowed", "description": "A request method is not supported for the requested resource." },
+      "406": { "title": "Not Acceptable", "description": "The requested resource is capable of generating content not acceptable according to the Accept headers." },
+      "407": { "title": "Proxy Authentication Required", "description": "The client must first authenticate itself with the proxy." },
+      "408": { "title": "Request Timeout", "description": "The server timed out waiting for the request from the client." },
+      "409": { "title": "Conflict", "description": "Indicates that the request could not be processed because of conflict in the current state of the resource." },
+      "410": { "title": "Gone", "description": "Indicates that the resource requested is no longer available and will not be available again." },
+      "411": { "title": "Length Required", "description": "The request did not specify the length of its content, which is required by the requested resource." },
+      "412": { "title": "Precondition Failed", "description": "The server does not meet one of the preconditions that the requester put on the request." },
+      "413": { "title": "Content Too Large", "description": "The request is larger than the server is willing or able to process." },
+      "414": { "title": "URI Too Long", "description": "The URI provided was too long for the server to process." },
+      "415": { "title": "Unsupported Media Type", "description": "The request entity has a media type which the server or resource does not support." },
+      "416": { "title": "Range Not Satisfiable", "description": "The client has asked for a portion of the file, but the server cannot supply that portion." },
+      "417": { "title": "Expectation Failed", "description": "The server cannot meet the requirements of the Expect request-header field." },
+      "418": { "title": "I'm a Teapot", "description": "The server refuses the attempt to brew coffee with a teapot." },
+      "421": { "title": "Misdirected Request", "description": "The request was directed at a server that is not able to produce a response." },
+      "422": { "title": "Unprocessable Content", "description": "The request was well-formed but was unable to be followed due to semantic errors." },
+      "423": { "title": "Locked", "description": "The resource that is being accessed is locked." },
+      "424": { "title": "Failed Dependency", "description": "The request failed because it depended on another request and that request failed." },
+      "425": { "title": "Too Early", "description": "Indicates that the server is unwilling to risk processing a request that might be replayed." },
+      "426": { "title": "Upgrade Required", "description": "The client should switch to a different protocol." },
+      "428": { "title": "Precondition Required", "description": "The origin server requires the request to be conditional." },
+      "429": { "title": "Too Many Requests", "description": "The user has sent too many requests in a given amount of time." },
+      "431": { "title": "Request Header Fields Too Large", "description": "The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large." },
+      "451": { "title": "Unavailable For Legal Reasons", "description": "A server operator has received a legal demand to deny access to a resource." },
+      "500": { "title": "Internal Server Error", "description": "A generic error message, given when an unexpected condition was encountered." },
+      "501": { "title": "Not Implemented", "description": "The server either does not recognize the request method, or it lacks the ability to fulfil the request." },
+      "502": { "title": "Bad Gateway", "description": "The server was acting as a gateway or proxy and received an invalid response from the upstream server." },
+      "503": { "title": "Service Unavailable", "description": "The server cannot handle the request (because it is overloaded or down for maintenance)." },
+      "504": { "title": "Gateway Timeout", "description": "The server was acting as a gateway or proxy and did not receive a timely response from the upstream server." },
+      "505": { "title": "HTTP Version Not Supported", "description": "The server does not support the HTTP protocol version used in the request." },
+      "506": { "title": "Variant Also Negotiates", "description": "Transparent content negotiation for the request results in a circular reference." },
+      "507": { "title": "Insufficient Storage", "description": "The server is unable to store the representation needed to complete the request." },
+      "508": { "title": "Loop Detected", "description": "The server detected an infinite loop while processing the request." },
+      "510": { "title": "Not Extended", "description": "Further extensions to the request are required for the server to fulfil it." },
+      "511": { "title": "Network Authentication Required", "description": "The client needs to authenticate to gain network access." }
+    }
+  },
+  "xpath-css-builder": {
+    "title": "XPath & CSS Selector Builder",
+    "description": "Build XPath and CSS selectors in real-time by filling in tag, class, ID, and attributes.",
+    "tagLabel": "Tag Name",
+    "classLabel": "Class Name",
+    "idLabel": "ID",
+    "attrNameLabel": "Attribute Name",
+    "attrValueLabel": "Attribute Value",
+    "xpathOutput": "XPath",
+    "cssOutput": "CSS Selector",
+    "realTimeUpdate": "Results update in real-time as you type.",
+    "copy": "Copy",
+    "clear": "Clear",
+    "copied": "Copied to clipboard",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Build a locator for a button with class \"btn-primary\" and id \"submit\"",
+        "Generate an XPath for elements with a custom data-testid attribute",
+        "Create a CSS selector for a form input inside a specific container"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is the difference between XPath and CSS selectors?",
+          "answer": "XPath can traverse up the DOM tree (find parent elements) and supports text-based matching. CSS selectors are generally faster and more concise for simple element selection. Both are widely used in test automation."
+        },
+        {
+          "question": "Which should I use for test automation?",
+          "answer": "CSS selectors are preferred for speed and simplicity. Use XPath when you need to navigate parent elements, match by text content, or when CSS selectors cannot uniquely identify an element."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When writing Selenium, Playwright, or Cypress test locators",
+        "When building XPath or CSS selectors for web scraping",
+        "When debugging element selection issues in test automation"
+      ]
+    }
+  },
+  "cep-generator": {
+    "title": "CEP Generator & Validator",
+    "description": "Generate and validate Brazilian CEP postal codes.",
+    "generate": "Generate CEP",
+    "validate": "Validate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "CEP Number",
+    "inputPlaceholder": "Enter a CEP (e.g. 01001-000)",
+    "successCopy": "CEP copied to clipboard",
+    "successValid": "Valid CEP",
+    "errorInvalid": "Invalid CEP",
+    "errorCopy": "Failed to copy. Please try again.",
+    "generateBatch": "Generate Batch",
+    "batchCount": "Quantity",
+    "singleMode": "Single",
+    "batchMode": "Batch",
+    "batchResultLabel": "Generated CEPs",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate valid CEP codes for QA testing of Brazilian address forms",
+        "Validate user-entered CEPs in form validation logic",
+        "Create test data for shipping and logistics applications"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a CEP?",
+          "answer": "CEP (Código de Endereçamento Postal) is the Brazilian postal code system. It consists of 8 digits in the format XXXXX-XXX."
+        },
+        {
+          "question": "Are the generated CEPs real?",
+          "answer": "The generator creates random 8-digit numbers formatted as CEPs. They may or may not correspond to real addresses in Brazil."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When testing Brazilian forms that require CEP input",
+        "When validating CEP entries in QA and automation testing",
+        "When generating test data for shipping or logistics systems"
+      ]
+    }
+  },
+  "renavam-generator": {
+    "title": "Renavam Generator & Validator",
+    "description": "Generate and validate Brazilian Renavam vehicle registration numbers.",
+    "generate": "Generate Renavam",
+    "validate": "Validate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Renavam Number",
+    "inputPlaceholder": "Enter a Renavam (e.g. 00123456789)",
+    "successCopy": "Renavam copied to clipboard",
+    "successValid": "Valid Renavam",
+    "errorInvalid": "Invalid Renavam",
+    "errorCopy": "Failed to copy. Please try again.",
+    "generateBatch": "Generate Batch",
+    "batchCount": "Quantity",
+    "singleMode": "Single",
+    "batchMode": "Batch",
+    "batchResultLabel": "Generated Renavams",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate valid Renavam numbers for QA testing of vehicle registration systems",
+        "Validate user-entered Renavam numbers in form validation logic",
+        "Create test data for automotive or government applications"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a Renavam?",
+          "answer": "Renavam (Registro Nacional de Veículos Automotores) is the Brazilian national vehicle registration number. It consists of 11 digits including a check digit."
+        },
+        {
+          "question": "Are the generated Renavam numbers real?",
+          "answer": "The generator creates valid Renavam numbers using the official check digit algorithm, but they are not necessarily registered with DENATRAN."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When testing Brazilian vehicle registration forms",
+        "When validating Renavam entries in QA and automation testing",
+        "When generating test data for automotive systems"
+      ]
+    }
+  },
+  "pix-key-generator": {
+    "title": "PIX Key Generator",
+    "description": "Generate fake PIX keys for testing Brazilian payment systems.",
+    "keyType": "Key Type",
+    "randomKey": "Random (EVP)",
+    "cpfKey": "CPF",
+    "emailKey": "Email",
+    "generate": "Generate PIX Key",
+    "copy": "Copy",
+    "clear": "Clear",
+    "resultLabel": "Generated PIX Key",
+    "successCopy": "PIX key copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate test PIX keys for payment system development",
+        "Create fake PIX data for QA testing of Brazilian banking apps",
+        "Test PIX key validation logic in payment forms"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a PIX key?",
+          "answer": "PIX is Brazil's instant payment system. PIX keys can be random (EVP), CPF, email, phone, or key. This tool generates random EVP keys, formatted CPFs, and fake emails for testing."
+        },
+        {
+          "question": "Are these real PIX keys?",
+          "answer": "No. These are fake keys generated for testing purposes only. They are not registered in the Brazilian Central Bank's PIX system."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When developing or testing PIX payment integrations",
+        "When creating test data for Brazilian fintech applications",
+        "When validating PIX key formats in QA testing"
+      ]
+    }
+  },
+  "number-base-converter": {
+    "title": "Number Base Converter",
+    "description": "Convert numbers between Decimal, Hexadecimal, Binary, and Octal in real-time.",
+    "decimal": "Decimal",
+    "hex": "Hexadecimal",
+    "binary": "Binary",
+    "octal": "Octal",
+    "enterValue": "Enter a value...",
+    "invalidInput": "Invalid input for this base",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert decimal values to hexadecimal for color codes",
+        "Convert binary data for low-level debugging",
+        "Quickly translate between number systems during development"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What number bases are supported?",
+          "answer": "The converter supports Decimal (base 10), Hexadecimal (base 16), Binary (base 2), and Octal (base 8)."
+        },
+        {
+          "question": "Does it handle negative numbers?",
+          "answer": "Yes. You can enter negative decimal numbers and they will be converted to the appropriate representation in other bases."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting between number systems during debugging",
+        "When working with color codes (hex to decimal)",
+        "When analyzing binary data or bitmasks"
+      ]
+    }
+  },
+  "byte-converter": {
+    "title": "Byte Converter",
+    "description": "Convert between Bytes, KB, MB, GB, and TB storage units.",
+    "inputLabel": "Value",
+    "resultLabel": "Converted Values",
+    "bytes": "Bytes",
+    "bits": "Bits",
+    "kilobytes": "Kilobytes",
+    "megabytes": "Megabytes",
+    "gigabytes": "Gigabytes",
+    "terabytes": "Terabytes",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Values copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert file sizes between storage units",
+        "Calculate memory requirements for applications",
+        "Verify network transfer speeds in different units"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What conversion units are supported?",
+          "answer": "The converter supports Bytes (B), Kilobytes (KB), Megabytes (MB), Gigabytes (GB), and Terabytes (TB)."
+        },
+        {
+          "question": "What is the conversion factor?",
+          "answer": "Each unit is 1024 times the previous unit. For example, 1 KB = 1024 Bytes, 1 MB = 1024 KB, etc."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting file sizes between different units",
+        "When calculating storage requirements",
+        "When comparing network bandwidth or memory allocations"
+      ]
+    }
+  },
+  "csv-json-converter": {
+    "title": "CSV ⇄ JSON Converter",
+    "description": "Convert between CSV and JSON formats. Handles quoted fields and special characters.",
+    "csvToJsonTab": "CSV → JSON",
+    "jsonToCsvTab": "JSON → CSV",
+    "inputPlaceholder": "Paste your CSV or JSON data here...",
+    "outputLabel": "Output",
+    "copy": "Copy",
+    "clear": "Clear",
+    "convert": "Convert",
+    "errorInvalid": "Invalid input. Please check the format.",
+    "successCopy": "Output copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert CSV spreadsheet data to JSON for API integration",
+        "Transform JSON API responses to CSV for Excel analysis",
+        "Migrate data between CSV and JSON formats"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does it handle quoted fields?",
+          "answer": "Yes. The converter properly handles quoted fields, commas inside quotes, and newlines within quoted values."
+        },
+        {
+          "question": "What JSON format is produced?",
+          "answer": "The output JSON is pretty-printed with 2-space indentation for readability. Each row becomes an object with column headers as keys."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting CSV data for API consumption",
+        "When exporting JSON data to spreadsheet format",
+        "When migrating between data formats"
+      ]
+    }
+  },
+  "curl-to-code": {
+    "title": "cURL to Code Converter",
+    "description": "Convert cURL commands to JavaScript (fetch) or Python (requests) code instantly.",
+    "curlInput": "cURL Command",
+    "curlPlaceholder": "Paste your cURL command here...",
+    "jsTab": "JavaScript (fetch)",
+    "pythonTab": "Python (requests)",
+    "copyCode": "Copy Code",
+    "copy": "Copy",
+    "clear": "Clear",
+    "copied": "Copied to clipboard",
+    "errorInvalid": "Invalid cURL command. Please check the format.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert a cURL command from API documentation to working code",
+        "Quickly generate fetch or requests code from a browser network tab",
+        "Translate cURL debugging commands into reusable code snippets"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What cURL flags are supported?",
+          "answer": "The converter supports -X (method), -H/--header (headers), -d/--data (request body), -b/--cookie (cookies), and URL arguments."
+        },
+        {
+          "question": "Does it handle complex cURL commands?",
+          "answer": "Yes. It parses multi-line cURL commands with backslash continuations, multiple headers, cookies, and JSON request bodies."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting API documentation cURL examples to code",
+        "When translating browser network tab cURL commands to code",
+        "When you need quick JavaScript or Python code from a cURL command"
+      ]
+    }
+  },
+  "user-agent-parser": {
+    "title": "User-Agent Parser",
+    "description": "Decode User-Agent strings. Extract OS, browser, version, and device type from any UA string.",
+    "inputLabel": "User-Agent String",
+    "inputPlaceholder": "Paste a User-Agent string here...",
+    "analyzeButton": "Analyze",
+    "howToUse": "How to use",
+    "howToUseContent": "A User-Agent (UA) string is a text string that web browsers send to websites to identify the browser, operating system, and device. Paste any UA string into the field above to decode it. You can find User-Agent strings in your browser's developer tools or HTTP request logs.",
+    "realExample": "Real Example",
+    "realExampleHint": "Try pasting this example:",
+    "realExampleString": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "osLabel": "OS",
+    "browserLabel": "Browser",
+    "versionLabel": "Version",
+    "deviceLabel": "Device",
+    "copy": "Copy",
+    "clear": "Clear",
+    "copied": "Copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Parse User-Agent strings from HTTP request logs",
+        "Identify browser and device types from analytics data",
+        "Debug device-specific issues by analyzing UA strings"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What information is extracted?",
+          "answer": "The parser extracts the Operating System, Browser name, Browser version, and Device type (Desktop, Mobile, Tablet, or Unknown)."
+        },
+        {
+          "question": "Which browsers are supported?",
+          "answer": "Chrome, Firefox, Safari, Edge, and Opera are detected. The parser also handles most common User-Agent string formats from mobile devices."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When analyzing User-Agent strings from server logs",
+        "When debugging browser-specific issues in web applications",
+        "When testing responsive designs for different device types"
+      ]
+    }
+  },
+  "mime-type-checker": {
+    "title": "MIME Type Checker",
+    "description": "Look up the exact Content-Type for any file extension. Includes 100+ common MIME types.",
+    "inputLabel": "File Extension",
+    "inputPlaceholder": "Enter extension (e.g. .json, .csv, .pdf)",
+    "resultLabel": "Content-Type",
+    "noResult": "No MIME type found for this extension.",
+    "extensionLabel": "Extension",
+    "mimeTypeLabel": "MIME Type",
+    "commonTypes": "Search Common MIME Types",
+    "searchPlaceholder": "Search by extension or MIME type...",
+    "copy": "Copy",
+    "clear": "Clear",
+    "copied": "Copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Look up the correct Content-Type header for an API endpoint",
+        "Find MIME types for file upload validation logic",
+        "Reference MIME types when configuring web servers"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is a MIME type?",
+          "answer": "A MIME (Multipurpose Internet Mail Extensions) type indicates the nature and format of a document or file. It's used in HTTP headers to tell browsers how to handle responses."
+        },
+        {
+          "question": "How many MIME types are included?",
+          "answer": "The tool includes over 100 common MIME types covering web, images, audio, video, documents, archives, fonts, data formats, and programming languages."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When setting Content-Type headers in API responses",
+        "When configuring file upload validation",
+        "When setting up web server MIME type configurations"
+      ]
+    }
+  },
+  "chmod-calculator": {
+    "title": "Chmod Calculator",
+    "description": "Calculate Linux file permissions with a visual checkbox interface. Generates octal and symbolic notation.",
+    "owner": "Owner",
+    "group": "Group",
+    "public": "Public",
+    "read": "Read",
+    "write": "Write",
+    "execute": "Execute",
+    "octal": "Octal",
+    "symbolic": "Symbolic",
+    "presets": "Common Presets",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "explanationTitle": "How Chmod Works",
+    "explanationValues": "Each permission has a numeric value:",
+    "readEquals": "Read (r) = 4",
+    "writeEquals": "Write (w) = 2",
+    "executeEquals": "Execute (x) = 1",
+    "explanationGroups": "The total for each group is the sum of the active permissions:",
+    "ownerDescription": "The file creator/owner",
+    "groupDescription": "Users in the file's group",
+    "publicDescription": "Everyone else",
+    "explanationExample": "Example: Owner has r+w+x (4+2+1=7), Group has r+x (4+0+1=5), Public has r+x (4+0+1=5) =",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Calculate permissions for a web server directory (755)",
+        "Set secure file permissions for SSH keys (600)",
+        "Generate chmod commands for deployment scripts"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What do the octal numbers mean?",
+          "answer": "Each digit represents permissions for Owner, Group, and Public respectively. 4=read, 2=write, 1=execute. For example, 755 means Owner has rwx (7), Group has r-x (5), and Public has r-x (5)."
+        },
+        {
+          "question": "What is the difference between octal and symbolic notation?",
+          "answer": "Octal uses numbers (e.g., 755), while symbolic uses letters (e.g., rwxr-xr-x). Both represent the same permissions but in different formats."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When setting file permissions on Linux/Unix systems",
+        "When debugging permission-related issues on servers",
+        "When writing deployment or CI/CD scripts that need chmod commands"
+      ]
+    }
+  },
+  "qr-code-generator": {
+    "title": "QR Code Generator",
+    "description": "Generate QR codes from text or URLs. Download as PNG image.",
+    "textTab": "Text / URL",
+    "pixTab": "PIX Payment",
+    "inputLabel": "Text or URL",
+    "inputPlaceholder": "Enter text or URL to encode...",
+    "pixKeyLabel": "PIX Key",
+    "pixKeyPlaceholder": "Enter PIX key (CPF, email, phone, random key)...",
+    "pixNameLabel": "Receiver Name",
+    "pixNamePlaceholder": "Enter receiver name...",
+    "pixCityLabel": "City",
+    "pixCityPlaceholder": "São Paulo",
+    "pixAmountLabel": "Amount (optional)",
+    "pixAmountPlaceholder": "0.00",
+    "pixPayloadLabel": "PIX Payload",
+    "generate": "Generate QR Code",
+    "download": "Download PNG",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Data URL copied to clipboard",
+    "errorEmpty": "Please enter text or a URL to generate a QR code.",
+    "errorPixEmpty": "Please fill in the PIX Key, Receiver Name, and City fields.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate a QR code for a website URL to share",
+        "Create a QR code containing contact information",
+        "Generate a QR code with Wi-Fi credentials for easy sharing"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What types of content can I encode?",
+          "answer": "You can encode any text, including URLs, email addresses, phone numbers, Wi-Fi credentials, or plain text messages."
+        },
+        {
+          "question": "What is the maximum data capacity?",
+          "answer": "QR codes can hold up to 4,296 alphanumeric characters. However, for best scanning reliability, keeping the data under 1,000 characters is recommended."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When creating QR codes for marketing materials or presentations",
+        "When generating QR codes for product packaging or labels",
+        "When sharing URLs or contact info in a scannable format"
+      ]
+    }
+  },
+  "aspect-ratio-calculator": {
+    "title": "Aspect Ratio Calculator",
+    "description": "Enter the desired aspect ratio (e.g. 16:9). Then enter the Width OR Height. We will calculate the remaining dimension for you.",
+    "ratioBaseLabel": "Ratio Base",
+    "widthLabel": "Width (px)",
+    "heightLabel": "Height (px)",
+    "calculate": "Calculate",
+    "resultLabel": "Result",
+    "commonRatios": "Common Ratios",
+    "enterDimension": "Enter a width or height with a ratio to calculate",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Result copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Calculate the correct height for a 1920px wide 16:9 video",
+        "Find the aspect ratio of a 3000x2000 photo",
+        "Determine dimensions for a 4:3 thumbnail from a given width"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How do I use this calculator?",
+          "answer": "Enter any two of: width, height, or ratio. The calculator will determine the missing value. You can also click common ratio presets to auto-fill."
+        },
+        {
+          "question": "What are common aspect ratios?",
+          "answer": "16:9 (widescreen), 4:3 (standard), 1:1 (square), 21:9 (ultrawide), and 3:2 (photography) are the most common ratios used in media and design."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When resizing images and need to maintain proportions",
+        "When creating video content with specific aspect ratios",
+        "When designing layouts that require precise dimensions"
+      ]
+    }
+  },
+  "test-data-generator": {
+    "title": "Test Data Table Generator",
+    "description": "Define columns and types to generate mock data tables in CSV, JSON, or SQL format.",
+    "addColumn": "Add Column",
+    "removeColumn": "Remove",
+    "columnName": "Column Name",
+    "columnType": "Column Type",
+    "generate": "Generate Data",
+    "rows": "Rows",
+    "format": "Format",
+    "csv": "CSV",
+    "json": "JSON",
+    "sql": "SQL",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Data copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "resultLabel": "Generated Data",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate 100 rows of mock user data for database seeding",
+        "Create test CSV files for import/export testing",
+        "Generate SQL INSERT statements for test fixtures"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What data types are available?",
+          "answer": "Name, Email, Phone, Address, Number, Date, and UUID. Each type generates realistic random data."
+        },
+        {
+          "question": "How many rows can I generate?",
+          "answer": "You can generate between 1 and 1000 rows at a time."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When creating test fixtures for database seeding",
+        "When generating sample data for API testing",
+        "When building demo datasets for development environments"
+      ]
+    }
+  },
+  "bdd-gherkin-builder": {
+    "title": "BDD / Gherkin Snippet Builder",
+    "description": "Build Gherkin scenarios visually with Given, When, Then steps. Perfectly formatted output.",
+    "featureName": "Feature Name",
+    "scenarioName": "Scenario Name",
+    "addStep": "Add Step",
+    "stepType": "Step Type",
+    "stepText": "Step description...",
+    "removeStep": "Remove",
+    "generate": "Generate Gherkin",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Gherkin snippet copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "resultLabel": "Generated Gherkin",
+    "given": "Given",
+    "when": "When",
+    "then": "Then",
+    "and": "And",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Build Gherkin scenarios for login functionality testing",
+        "Create BDD specifications for API endpoint validation",
+        "Generate Given/When/Then steps for shopping cart workflows"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What is Gherkin syntax?",
+          "answer": "Gherkin is a plain-text language used to describe business behavior in BDD (Behavior-Driven Development). It uses Given/When/Then keywords to structure test scenarios."
+        },
+        {
+          "question": "What are Given, When, Then?",
+          "answer": "Given sets up the initial context, When describes the action or event, and Then specifies the expected outcome. 'And' can be used to extend any of these steps."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When writing BDD test scenarios for Cucumber or SpecFlow",
+        "When creating living documentation for application behavior",
+        "When collaborating with non-technical stakeholders on requirements"
+      ]
+    }
+  },
+  "markdown-html-converter": {
+    "title": "Markdown ⇄ HTML Converter",
+    "description": "Convert between Markdown and HTML bidirectionally.",
+    "mdToHtmlTab": "Markdown → HTML",
+    "htmlToMdTab": "HTML → Markdown",
+    "inputPlaceholder": "Enter Markdown or HTML to convert...",
+    "outputLabel": "Output",
+    "copy": "Copy",
+    "clear": "Clear",
+    "convert": "Convert",
+    "exportPdf": "Export to PDF",
+    "errorInvalid": "Conversion failed. Please check your input.",
+    "successCopy": "Output copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Convert Markdown documentation to HTML for web publishing",
+        "Extract clean Markdown from HTML email templates",
+        "Transform HTML snippets to Markdown for README files"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "Headers (h1-h6), bold, italic, links, images, code blocks, inline code, lists (ordered and unordered), blockquotes, and horizontal rules."
+        },
+        {
+          "question": "Is this a full HTML parser?",
+          "answer": "This is a lightweight client-side converter. It handles common HTML elements but may not support complex nested structures or custom attributes."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When converting Markdown files to HTML for documentation sites",
+        "When extracting content from HTML pages into Markdown",
+        "When migrating content between Markdown and HTML formats"
+      ]
+    }
+  },
+  "text-binary-converter": {
+    "title": "Text ⇄ Binary Converter",
+    "description": "Convert text to binary (UTF-8) and binary back to text. Useful for encoding, debugging, and learning.",
+    "textToBinaryTab": "Text → Binary",
+    "binaryToTextTab": "Binary → Text",
+    "textToBinaryPlaceholder": "Enter text to convert to binary...",
+    "binaryToTextPlaceholder": "Enter space-separated 8-bit binary values...",
+    "inputLabel": "Input",
+    "outputLabel": "Output",
+    "convert": "Convert",
+    "copy": "Copy",
+    "clear": "Clear",
+    "successCopy": "Output copied to clipboard",
+    "errorInvalid": "Invalid input. Please check your input and try again.",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "\"Hello\" → \"01001000 01100101 01101100 01101100 01101111\"",
+        "\"ABC\" → \"01000001 01000010 01000011\"",
+        "\"01001000 01101001\" → \"Hi\""
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How does text to binary conversion work?",
+          "answer": "Each character is converted to its 8-bit binary representation using UTF-8 encoding. For example, the letter 'A' has the ASCII value 65, which is 01000001 in binary."
+        },
+        {
+          "question": "Does this support Unicode characters?",
+          "answer": "Yes, this tool uses UTF-8 encoding, so it supports all Unicode characters including emojis, accented characters, and non-Latin scripts."
+        },
+        {
+          "question": "What format should binary input be in?",
+          "answer": "Binary values should be 8 bits each (e.g., 01000001), separated by spaces. Each 8-bit group represents one byte/character."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When learning about binary representation of text",
+        "When debugging data encoding or transmission issues",
+        "When you need to convert text to binary for educational purposes"
+      ]
+    }
+  },
+  "markdown-pdf-converter": {
+    "title": "Markdown → PDF",
+    "description": "Convert Markdown documents to beautifully styled PDF files. Perfect for reports, documentation, and professional documents.",
+    "inputLabel": "Markdown Input",
+    "inputPlaceholder": "Enter your Markdown here...",
+    "previewLabel": "Preview",
+    "convertButton": "Export to PDF",
+    "copy": "Copy HTML",
+    "clear": "Clear",
+    "successCopy": "HTML copied to clipboard",
+    "errorCopy": "Failed to copy. Please try again.",
+    "examples": {
+      "title": "Examples of use",
+      "items": [
+        "Generate professional reports from Markdown specifications",
+        "Export documentation to print-ready PDF format",
+        "Create polished presentations from Markdown content"
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "How does the PDF export work?",
+          "answer": "The tool converts your Markdown to styled HTML and opens it in a new window. The browser's print dialog then lets you save as PDF. This uses the built-in window.print() API — no server-side processing required."
+        },
+        {
+          "question": "What Markdown features are supported?",
+          "answer": "Headers (h1-h6), bold, italic, links, images, code blocks, inline code, lists (ordered and unordered), blockquotes, horizontal rules, and tables."
+        },
+        {
+          "question": "Why use this instead of the Markdown ⇄ HTML converter?",
+          "answer": "This tool is specifically designed for PDF output with professional typography and styling. It includes Google Fonts (Inter, JetBrains Mono), carefully crafted CSS for print media, and a streamlined workflow focused on document export."
+        }
+      ]
+    },
+    "whenToUse": {
+      "title": "When to use this tool?",
+      "items": [
+        "When you need to export Markdown to a professional-looking PDF",
+        "When creating reports or documentation for print",
+        "When you want beautifully styled code blocks and typography in your documents"
+      ]
+    },
+    "themeLabel": "Document Theme",
+    "themeModern": "Modern (Clean & Blue)",
+    "themeAcademic": "Academic (Serif & Formal)",
+    "themeMinimalist": "Minimalist (Black & White)",
+    "themeElegant": "Elegant (Sophisticated / Teal)",
+    "pageSizeLabel": "Page Size",
+    "orientationLabel": "Orientation",
+    "marginsLabel": "Margins",
+    "marginStandard": "Standard (20mm)",
+    "marginCompact": "Compact (10mm)",
+    "marginWide": "Wide (30mm)",
+    "marginNone": "None (0mm)",
+    "orientationPortrait": "Portrait",
+    "orientationLandscape": "Landscape",
+    "layoutOptions": "Layout Options",
+    "pageBreakH1": "Page break before each H1",
+    "showHeader": "Show title in header",
+    "showHeaderDate": "Show date in footer",
+    "docTitleLabel": "Document Title",
+    "docTitlePlaceholder": "Enter a document title...",
+    "previewPaperLabel": "Page Sheet Preview"
   }
 }

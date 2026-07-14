@@ -74,3 +74,51 @@ export const CARD_BRANDS: { id: CardBrand; name: string }[] = [
   { id: "amex", name: "American Express" },
   { id: "discover", name: "Discover" },
 ];
+
+export interface CardData {
+  number: string;
+  name: string;
+  cvv: string;
+  expiry: string;
+  brand: CardBrand;
+}
+
+const FIRST_NAMES = [
+  "John", "Maria", "James", "Sarah", "Robert", "Linda", "Michael", "Jennifer",
+  "David", "Patricia", "William", "Elizabeth", "Richard", "Barbara", "Joseph",
+  "Susan", "Thomas", "Jessica", "Charles", "Karen", "Daniel", "Nancy",
+];
+
+const LAST_NAMES = [
+  "Smith", "Garcia", "Johnson", "Williams", "Brown", "Jones", "Miller",
+  "Davis", "Rodriguez", "Martinez", "Anderson", "Taylor", "Thomas",
+  "Jackson", "White", "Harris", "Martin", "Thompson", "Moore", "Allen",
+];
+
+export function generateFakeName(): string {
+  const first = FIRST_NAMES[Math.floor(Math.random() * FIRST_NAMES.length)];
+  const last = LAST_NAMES[Math.floor(Math.random() * LAST_NAMES.length)];
+  return `${first} ${last}`;
+}
+
+export function generateCVV(brand: CardBrand): string {
+  const length = brand === "amex" ? 4 : 3;
+  return generateRandomDigits(length);
+}
+
+export function generateExpiryDate(): string {
+  const now = new Date();
+  const year = now.getFullYear() + 1 + Math.floor(Math.random() * 5);
+  const month = Math.floor(Math.random() * 12) + 1;
+  return `${String(month).padStart(2, "0")}/${String(year % 100).padStart(2, "0")}`;
+}
+
+export function generateCardData(brand: CardBrand): CardData {
+  return {
+    number: formatCardNumber(generateCardNumber(brand)),
+    name: generateFakeName(),
+    cvv: generateCVV(brand),
+    expiry: generateExpiryDate(),
+    brand,
+  };
+}

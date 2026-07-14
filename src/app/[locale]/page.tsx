@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useMemo, useCallback } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import {
   Database,
@@ -28,15 +29,46 @@ const CATEGORY_ICONS: Record<ToolCategory, typeof Database> = {
   Others: MoreHorizontal,
 };
 
-export default function HomePage() {
+const VALID_CATEGORIES = new Set(CATEGORY_ORDER);
+
+function readCategories(searchParams: URLSearchParams): ToolCategory[] {
+  const params = searchParams.getAll("category");
+  if (params.length === 0) return [];
+  return params.filter((p): p is ToolCategory => VALID_CATEGORIES.has(p as ToolCategory));
+}
+
+function HomePageContent() {
   const t = useTranslations("home");
-  const [selectedCategory, setSelectedCategory] = useState<ToolCategory | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const selectedCategories = useMemo(() => readCategories(searchParams), [searchParams]);
+
+  const toggleCategory = useCallback((cat: ToolCategory) => {
+    const next = new URLSearchParams(searchParams.toString());
+    const existing = next.getAll("category");
+
+    let updated: string[];
+    if (existing.includes(cat)) {
+      updated = existing.filter((c) => c !== cat);
+    } else {
+      updated = [...existing, cat];
+    }
+
+    // Clear then re-set to keep order clean
+    next.delete("category");
+    for (const c of updated) next.append("category", c);
+
+    const qs = next.toString();
+    router.push(`?${qs}`, { scroll: false });
+  }, [searchParams, router]);
 
   const filteredTools = useMemo(
-    () => selectedCategory
-      ? toolsCatalog.filter((tool) => tool.category === selectedCategory)
-      : toolsCatalog,
-    [selectedCategory],
+    () =>
+      selectedCategories.length > 0
+        ? toolsCatalog.filter((tool) => selectedCategories.includes(tool.category))
+        : toolsCatalog,
+    [selectedCategories],
   );
 
   const groupedTools = useMemo(() => {
@@ -49,6 +81,11 @@ export default function HomePage() {
       .filter((cat) => groups[cat]?.length)
       .map((cat) => ({ category: cat, tools: groups[cat]! }));
   }, [filteredTools]);
+
+  const descriptionSuffix = useMemo(() => {
+    if (selectedCategories.length === 0) return null;
+    return selectedCategories.map((c) => t(`categories.${c.toLowerCase()}`)).join(", ");
+  }, [selectedCategories, t]);
 
   return (
     <div className="flex flex-col">
@@ -73,20 +110,21 @@ export default function HomePage() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {CATEGORY_ORDER.map((cat) => {
             const Icon = CATEGORY_ICONS[cat];
+            const isActive = selectedCategories.includes(cat);
             const descKey = `categories.${cat.toLowerCase()}Description` as const;
             return (
               <button
                 key={cat}
                 type="button"
-                onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
+                onClick={() => toggleCategory(cat)}
                 className={`flex items-start gap-4 rounded-lg border p-5 text-left transition-colors ${
-                  selectedCategory === cat
+                  isActive
                     ? "border-brand-blue bg-brand-blue/5 ring-1 ring-brand-blue/20"
                     : "border-border bg-card hover:border-brand-blue/30 hover:bg-accent/50"
                 }`}
               >
                 <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-md transition-colors ${
-                  selectedCategory === cat
+                  isActive
                     ? "bg-brand-blue text-white"
                     : "bg-muted text-muted-foreground"
                 }`}>
@@ -112,8 +150,8 @@ export default function HomePage() {
           {t("tools.title")}
         </h2>
         <p className="mb-8 text-sm text-muted-foreground">
-          {selectedCategory
-            ? `${t("tools.description")} - ${t(`categories.${selectedCategory.toLowerCase()}`)}`
+          {descriptionSuffix
+            ? `${t("tools.description")} - ${descriptionSuffix}`
             : t("tools.description")}
         </p>
 
@@ -139,5 +177,13 @@ export default function HomePage() {
         )}
       </section>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense>
+      <HomePageContent />
+    </Suspense>
   );
 }

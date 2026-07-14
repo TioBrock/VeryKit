@@ -8,10 +8,15 @@ import { generateCpf, validateCpf, formatCpf } from "@/features/cpf-generator/ut
 
 export function CpfGeneratorForm() {
   const t = useTranslations("cpf-generator");
+  const [mode, setMode] = useState<"single" | "batch">("single");
   const [cpf, setCpf] = useState("");
   const [validationResult, setValidationResult] = useState<"valid" | "invalid" | null>(null);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
+  const [batchCount, setBatchCount] = useState(10);
+  const [batchResult, setBatchResult] = useState("");
+  const [batchCopied, setBatchCopied] = useState(false);
+  const [batchCopyError, setBatchCopyError] = useState(false);
 
   const handleGenerate = useCallback(() => {
     const newCpf = generateCpf();
@@ -55,6 +60,32 @@ export function CpfGeneratorForm() {
     setCopyError(false);
   }, []);
 
+  const handleBatchGenerate = useCallback(() => {
+    const count = Math.min(Math.max(batchCount, 1), 100);
+    const cpfs = Array.from({ length: count }, () => generateCpf());
+    setBatchResult(cpfs.join("\n"));
+    setBatchCopied(false);
+    setBatchCopyError(false);
+  }, [batchCount]);
+
+  const handleBatchCopy = useCallback(async () => {
+    if (!batchResult) return;
+    try {
+      await navigator.clipboard.writeText(batchResult);
+      setBatchCopied(true);
+      setBatchCopyError(false);
+    } catch {
+      setBatchCopied(false);
+      setBatchCopyError(true);
+    }
+  }, [batchResult]);
+
+  const handleBatchClear = useCallback(() => {
+    setBatchResult("");
+    setBatchCopied(false);
+    setBatchCopyError(false);
+  }, []);
+
   const faqItems = t.raw("faq.items") as Array<{ question: string; answer: string }>;
   const exampleItems = t.raw("examples.items") as string[];
   const whenToUseItems = t.raw("whenToUse.items") as string[];
@@ -71,86 +102,192 @@ export function CpfGeneratorForm() {
         </p>
       </div>
 
-      {/* Work area */}
-      <div className="flex flex-col gap-4">
-        {/* Input */}
-        <div>
-          <label htmlFor="cpf-input" className="mb-2 block text-sm font-medium text-foreground">
-            {t("resultLabel")}
-          </label>
-          <input
-            id="cpf-input"
-            type="text"
-            value={cpf}
-            onChange={(e) => handleInputChange(e.target.value)}
-            placeholder={t("inputPlaceholder")}
-            maxLength={14}
-            className="h-12 w-full rounded-md border border-input bg-muted/50 px-4 font-mono text-sm text-foreground outline-none"
-          />
+      {/* Mode toggle */}
+      <div className="flex rounded-md border border-border bg-card p-1">
+        <button
+          type="button"
+          onClick={() => setMode("single")}
+          className={`flex-1 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+            mode === "single"
+              ? "bg-brand-blue text-white"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          {t("singleMode")}
+        </button>
+        <button
+          type="button"
+          onClick={() => setMode("batch")}
+          className={`flex-1 rounded-md px-4 py-2 text-sm font-medium transition-colors ${
+            mode === "batch"
+              ? "bg-brand-blue text-white"
+              : "text-muted-foreground hover:text-foreground"
+          }`}
+        >
+          {t("batchMode")}
+        </button>
+      </div>
+
+      {/* Single mode */}
+      {mode === "single" && (
+        <div className="flex flex-col gap-4">
+          {/* Input */}
+          <div>
+            <label htmlFor="cpf-input" className="mb-2 block text-sm font-medium text-foreground">
+              {t("resultLabel")}
+            </label>
+            <input
+              id="cpf-input"
+              type="text"
+              value={cpf}
+              onChange={(e) => handleInputChange(e.target.value)}
+              placeholder={t("inputPlaceholder")}
+              maxLength={14}
+              className="h-12 w-full rounded-md border border-input bg-muted/50 px-4 font-mono text-sm text-foreground outline-none"
+            />
+          </div>
+
+          {/* Validation result */}
+          {validationResult && (
+            <p
+              className={`text-sm font-medium ${validationResult === "valid" ? "text-green-600" : "text-destructive"}`}
+              role="alert"
+            >
+              {validationResult === "valid" ? t("successValid") : t("errorInvalid")}
+            </p>
+          )}
+
+          {/* Action buttons */}
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={handleGenerate}
+              className="inline-flex h-12 items-center justify-center rounded-md bg-brand-blue px-6 text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-blue/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
+            >
+              {t("generate")}
+            </button>
+            <button
+              type="button"
+              onClick={handleValidate}
+              disabled={!cpf}
+              className="inline-flex h-12 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+            >
+              {t("validate")}
+            </button>
+          </div>
+
+          {/* Action row */}
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={handleCopy}
+              disabled={!cpf}
+              className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+            >
+              {copied ? (
+                <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
+              ) : (
+                <Copy className="h-4 w-4" aria-hidden="true" />
+              )}
+              {copied ? t("successCopy") : t("copy")}
+            </button>
+            <button
+              type="button"
+              onClick={handleClear}
+              disabled={!cpf}
+              className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+            >
+              <Trash2 className="h-4 w-4" aria-hidden="true" />
+              {t("clear")}
+            </button>
+          </div>
+
+          {/* Copy error */}
+          {copyError && (
+            <p className="text-sm text-destructive" role="alert">
+              {t("errorCopy")}
+            </p>
+          )}
         </div>
+      )}
 
-        {/* Validation result */}
-        {validationResult && (
-          <p
-            className={`text-sm font-medium ${validationResult === "valid" ? "text-green-600" : "text-destructive"}`}
-            role="alert"
-          >
-            {validationResult === "valid" ? t("successValid") : t("errorInvalid")}
-          </p>
-        )}
+      {/* Batch mode */}
+      {mode === "batch" && (
+        <div className="flex flex-col gap-4">
+          {/* Quantity input */}
+          <div>
+            <label htmlFor="cpf-batch-count" className="mb-2 block text-sm font-medium text-foreground">
+              {t("batchCount")}
+            </label>
+            <input
+              id="cpf-batch-count"
+              type="number"
+              min={1}
+              max={100}
+              value={batchCount}
+              onChange={(e) => setBatchCount(Math.min(Math.max(Number(e.target.value) || 1, 1), 100))}
+              className="h-12 w-full rounded-md border border-input bg-muted/50 px-4 font-mono text-sm text-foreground outline-none"
+            />
+          </div>
 
-        {/* Action buttons */}
-        <div className="flex flex-wrap gap-3">
+          {/* Generate button */}
           <button
             type="button"
-            onClick={handleGenerate}
+            onClick={handleBatchGenerate}
             className="inline-flex h-12 items-center justify-center rounded-md bg-brand-blue px-6 text-sm font-medium text-white shadow-sm transition-colors hover:bg-brand-blue/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
           >
-            {t("generate")}
+            {t("generateBatch")}
           </button>
-          <button
-            type="button"
-            onClick={handleValidate}
-            disabled={!cpf}
-            className="inline-flex h-12 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
-          >
-            {t("validate")}
-          </button>
-        </div>
 
-        {/* Action row */}
-        <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={handleCopy}
-            disabled={!cpf}
-            className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
-          >
-            {copied ? (
-              <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
-            ) : (
-              <Copy className="h-4 w-4" aria-hidden="true" />
-            )}
-            {copied ? t("successCopy") : t("copy")}
-          </button>
-          <button
-            type="button"
-            onClick={handleClear}
-            disabled={!cpf}
-            className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
-          >
-            <Trash2 className="h-4 w-4" aria-hidden="true" />
-            {t("clear")}
-          </button>
-        </div>
+          {/* Batch result */}
+          {batchResult && (
+            <>
+              <div>
+                <label htmlFor="cpf-batch-result" className="mb-2 block text-sm font-medium text-foreground">
+                  {t("batchResultLabel")}
+                </label>
+                <textarea
+                  id="cpf-batch-result"
+                  readOnly
+                  value={batchResult}
+                  className="w-full rounded-md border border-input bg-muted/50 px-4 py-3 font-mono text-sm text-foreground outline-none"
+                  rows={6}
+                  style={{ maxHeight: "16rem", overflowY: "auto" }}
+                />
+              </div>
 
-        {/* Copy error */}
-        {copyError && (
-          <p className="text-sm text-destructive" role="alert">
-            {t("errorCopy")}
-          </p>
-        )}
-      </div>
+              <div className="flex gap-3">
+                <button
+                  type="button"
+                  onClick={handleBatchCopy}
+                  className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+                >
+                  {batchCopied ? (
+                    <Check className="h-4 w-4 text-green-600" aria-hidden="true" />
+                  ) : (
+                    <Copy className="h-4 w-4" aria-hidden="true" />
+                  )}
+                  {batchCopied ? t("successCopy") : t("copy")}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleBatchClear}
+                  className="inline-flex h-10 items-center gap-2 rounded-md border border-border bg-background px-4 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue"
+                >
+                  <Trash2 className="h-4 w-4" aria-hidden="true" />
+                  {t("clear")}
+                </button>
+              </div>
+
+              {batchCopyError && (
+                <p className="text-sm text-destructive" role="alert">
+                  {t("errorCopy")}
+                </p>
+              )}
+            </>
+          )}
+        </div>
+      )}
 
       {/* Examples */}
       <div className="rounded-lg border border-border bg-card p-6">
