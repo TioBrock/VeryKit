@@ -48,7 +48,9 @@
     "tools": "Tools",
     "about": "About",
     "searchLabel": "Search tools",
-    "searchPlaceholder": "Search tools..."
+    "searchPlaceholder": "Search tools...",
+    "backToHome": "Back to Home",
+    "backToTools": "Back to Tools"
   },
   "actions": {
     "copy": "Copy",
