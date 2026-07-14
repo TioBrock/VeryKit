@@ -34,6 +34,38 @@ npm run build      # Build for production
 npm run lint       # Run ESLint
 ```
 
+## Branch Strategy
+
+We use a branching model to keep the codebase stable:
+
+- **`master`** — Production-ready code. Always stable.
+- **`develop`** — Integration branch for new features. PRs go here.
+- **`feature/*`** — Temporary branches for each contribution.
+
+### Creating a Pull Request
+
+1. Create a feature branch from `develop`:
+   ```bash
+   git checkout develop
+   git pull origin develop
+   git checkout -b feature/your-feature-name
+   ```
+
+2. Make your changes and commit:
+   ```bash
+   git add .
+   git commit -m "feat: add your feature description"
+   ```
+
+3. Push and create a Pull Request against `develop`:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+4. After review and approval, your PR will be merged into `develop`.
+
+5. When ready for production, `develop` is merged into `master`.
+
 ## Adding a New Tool
 
 Each new tool must follow the isolated feature architecture:
