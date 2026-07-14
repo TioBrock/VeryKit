@@ -4,7 +4,7 @@
   "description": "**One place. Every tool.**",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 next build",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
