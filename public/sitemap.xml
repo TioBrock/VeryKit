@@ -1,421 +1,618 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Home pages -->
-  <url>
-    <loc>https://verykit.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- About -->
-  <url>
-    <loc>https://verykit.vercel.app/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/about" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/about" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/about" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Contributing -->
-  <url>
-    <loc>https://verykit.vercel.app/en/contributing</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/contributing" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/contributing" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/contributing" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Security -->
-  <url>
-    <loc>https://verykit.vercel.app/en/security</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/security" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/security" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/security" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Tools -->
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/aspect-ratio-calculator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/aspect-ratio-calculator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/aspect-ratio-calculator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/aspect-ratio-calculator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/base64-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/base64-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/base64-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/base64-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/bdd-gherkin-builder</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/bdd-gherkin-builder" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/bdd-gherkin-builder" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/bdd-gherkin-builder" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/boundary-value-calculator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/boundary-value-calculator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/boundary-value-calculator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/boundary-value-calculator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/byte-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/byte-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/byte-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/byte-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/case-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/case-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/case-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/case-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/chmod-calculator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/chmod-calculator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/chmod-calculator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/chmod-calculator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/color-picker</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/color-picker" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/color-picker" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/color-picker" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/credit-card-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/credit-card-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/credit-card-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/credit-card-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/csv-json-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/csv-json-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/csv-json-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/csv-json-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/curl-to-code</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/curl-to-code" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/curl-to-code" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/curl-to-code" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/hash-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/hash-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/hash-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/hash-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/http-status-codes</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/http-status-codes" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/http-status-codes" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/http-status-codes" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/json-compare</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/json-compare" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/json-compare" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/json-compare" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/json-formatter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/json-formatter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/json-formatter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/json-formatter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/jwt-decoder</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/jwt-decoder" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/jwt-decoder" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/jwt-decoder" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/jwt-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/jwt-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/jwt-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/jwt-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/lorem-ipsum-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/lorem-ipsum-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/lorem-ipsum-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/lorem-ipsum-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/markdown-html-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/markdown-html-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/markdown-html-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/markdown-html-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/markdown-pdf-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/markdown-pdf-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/markdown-pdf-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/markdown-pdf-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/mime-type-checker</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/mime-type-checker" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/mime-type-checker" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/mime-type-checker" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/number-base-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/number-base-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/number-base-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/number-base-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/password-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/password-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/password-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/password-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/qr-code-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/qr-code-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/qr-code-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/qr-code-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/regex-tester</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/regex-tester" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/regex-tester" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/regex-tester" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/test-data-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/test-data-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/test-data-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/test-data-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/text-binary-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/text-binary-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/text-binary-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/text-binary-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/timestamp-converter</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/timestamp-converter" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/timestamp-converter" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/timestamp-converter" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/url-encoder</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/url-encoder" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/url-encoder" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/url-encoder" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/user-agent-parser</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/user-agent-parser" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/user-agent-parser" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/user-agent-parser" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/uuid-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/uuid-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/uuid-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/uuid-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/xpath-css-builder</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/xpath-css-builder" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/xpath-css-builder" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/xpath-css-builder" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Regional tools (Brazil) -->
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/br/cep-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/br/cep-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/br/cep-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/br/cep-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/br/cnpj-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/br/cnpj-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/br/cnpj-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/br/cnpj-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/br/cpf-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/br/cpf-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/br/cpf-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/br/cpf-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/br/pix-key-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/br/pix-key-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/br/pix-key-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/br/pix-key-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://verykit.vercel.app/en/tools/br/renavam-generator</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://verykit.vercel.app/en/tools/br/renavam-generator" />
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://verykit.vercel.app/pt-BR/tools/br/renavam-generator" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://verykit.vercel.app/es/tools/br/renavam-generator" />
-    <lastmod>2026-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://verykit.vercel.app/en</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/about</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/about</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/about</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/contributing</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/contributing</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/contributing</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/security</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/security</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/security</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/aspect-ratio-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/aspect-ratio-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/aspect-ratio-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/base64-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/base64-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/base64-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/bdd-gherkin-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/bdd-gherkin-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/bdd-gherkin-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/boundary-value-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/boundary-value-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/boundary-value-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/byte-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/byte-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/byte-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/case-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/case-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/case-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/chmod-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/chmod-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/chmod-calculator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/color-picker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/color-picker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/color-picker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/credit-card-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/credit-card-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/credit-card-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/csv-json-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/csv-json-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/csv-json-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/curl-to-code</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/curl-to-code</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/curl-to-code</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/hash-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/hash-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/hash-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/http-status-codes</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/http-status-codes</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/http-status-codes</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/json-compare</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/json-compare</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/json-compare</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/json-formatter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/json-formatter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/json-formatter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/jwt-decoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/jwt-decoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/jwt-decoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/jwt-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/jwt-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/jwt-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/lorem-ipsum-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/lorem-ipsum-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/lorem-ipsum-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/markdown-html-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/markdown-html-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/markdown-html-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/markdown-pdf-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/markdown-pdf-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/markdown-pdf-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/mime-type-checker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/mime-type-checker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/mime-type-checker</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/number-base-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/number-base-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/number-base-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/password-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/password-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/password-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/qr-code-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/qr-code-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/qr-code-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/regex-tester</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/regex-tester</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/regex-tester</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/test-data-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/test-data-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/test-data-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/text-binary-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/text-binary-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/text-binary-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/timestamp-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/timestamp-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/timestamp-converter</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/url-encoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/url-encoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/url-encoder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/user-agent-parser</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/user-agent-parser</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/user-agent-parser</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/uuid-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/uuid-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/uuid-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/xpath-css-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/xpath-css-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/xpath-css-builder</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/br/cep-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/br/cep-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/br/cep-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/br/cnpj-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/br/cnpj-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/br/cnpj-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/br/cpf-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/br/cpf-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/br/cpf-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/br/pix-key-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/br/pix-key-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/br/pix-key-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/en/tools/br/renavam-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/pt-BR/tools/br/renavam-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
+<url>
+<loc>https://verykit.vercel.app/es/tools/br/renavam-generator</loc>
+<lastmod>2026-07-15T00:00:00+00:00</lastmod>
+<priority>0.4</priority>
+</url>
 </urlset>
